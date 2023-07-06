@@ -1,0 +1,14 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "docs": "1.0.0",
+    "advanced-checkbox": "0.0.0",
+    "advanced-select": "0.0.0",
+    "eslint-config-custom": "0.0.0",
+    "tsconfig": "0.0.0"
+  },
+  "changesets": [
+    "violet-doors-glow"
+  ]
+}
