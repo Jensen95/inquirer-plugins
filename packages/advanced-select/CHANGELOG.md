@@ -1,5 +1,13 @@
 # advanced-select
 
+## 0.0.2
+
+### Patch Changes
+
+- e122855: Bumping version
+- Updated dependencies [e122855]
+  - fuzzy-match@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes
