@@ -1,5 +1,11 @@
 # advanced-checkbox
 
+## 0.0.3
+
+### Patch Changes
+
+- 81983d3: Removes public in publishConfig while on github package registry
+
 ## 0.0.2
 
 ### Patch Changes
