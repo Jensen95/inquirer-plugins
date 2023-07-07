@@ -15,6 +15,7 @@ import {
 import chalk from "chalk";
 import figures from "figures";
 import ansiEscapes from "ansi-escapes";
+import { fuzzyMatch, removeScore } from "fuzzy-match";
 
 export type AdvancedCheckboxChoice<Value> = {
   name?: string;
@@ -164,15 +165,11 @@ export const advancedCheckboxPrompt = createPrompt(
         : `${search}${key.name}`;
       setSearch(_search);
       setShowHelpTip(false);
-      // create fuzzy search on name and id
 
       setChoices(
-        initialChoices.filter((choice) => {
-          if (!isSelectableChoice(choice)) {
-            return false;
-          }
-          return choice.name?.includes(_search) || choice.id.includes(_search);
-        })
+        fuzzyMatch(_search, initialChoices.filter(isSelectableChoice)).map(
+          removeScore
+        )
       );
       setCursorPosition(0);
     });
