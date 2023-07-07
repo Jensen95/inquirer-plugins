@@ -19,7 +19,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.ts*\""
+    "lint": "eslint \"**/*.ts*\"",
+    "build": "unbuild"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
