@@ -36,8 +36,8 @@ jobs:
           cache: "npm"
           registry-url: "https://npm.pkg.github.com"
           scope: "@jensen95"
-        # env:
-        #   NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
@@ -45,8 +45,7 @@ jobs:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: npm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
-          NPM_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     #   - name: Send a Slack notification if a publish happens
     #     if: steps.changesets.outputs.published == 'true'
     #     # You can do something when a publish happens.
