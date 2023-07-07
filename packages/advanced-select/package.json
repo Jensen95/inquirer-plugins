@@ -1,0 +1,48 @@
+{
+  "name": "@jensen95/advanced-select",
+  "version": "0.0.1-alpha.0",
+  "type": "module",
+  "author": {
+    "name": "Morten Jensen",
+    "email": "mj.95dk@gmail.com"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^5.1.6",
+    "unbuild": "^1.2.1"
+  },
+  "dependencies": {
+    "fuzzy-match": "*",
+    "@inquirer/core": "^2.2.0",
+    "@inquirer/type": "^1.1.0",
+    "ansi-escapes": "^6.2.0",
+    "chalk": "^5.3.0",
+    "figures": "^5.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/Jensen95/inquirer-plugins",
+    "directory": "packages/advanced-select"
+  }
+}
