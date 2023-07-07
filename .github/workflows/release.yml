@@ -29,13 +29,6 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-          @jensen95:registry=https://npm.pkg.github.com/:_authToken=$NPM_TOKEN
-          EOF
-        env:
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Change to github package repository
         uses: actions/setup-node@v3
         with:
@@ -43,8 +36,6 @@ jobs:
           cache: "npm"
           registry-url: "https://npm.pkg.github.com"
           scope: "@jensen95"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
@@ -52,9 +43,7 @@ jobs:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: npm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #   NPM_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
     #   - name: Send a Slack notification if a publish happens
     #     if: steps.changesets.outputs.published == 'true'
     #     # You can do something when a publish happens.
