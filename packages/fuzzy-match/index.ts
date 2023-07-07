@@ -3,6 +3,8 @@ export interface FuzzyMatchResult<T> {
   score: number;
 }
 
+export const removeScore = <T>(result: FuzzyMatchResult<T>): T => result.item;
+
 export const fuzzyMatch = <T extends { name?: string; id: string }>(
   query: string,
   list: T[]
