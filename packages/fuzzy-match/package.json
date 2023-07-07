@@ -30,8 +30,5 @@
     "tsconfig": "*",
     "typescript": "^5.1.6",
     "unbuild": "^1.2.1"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
