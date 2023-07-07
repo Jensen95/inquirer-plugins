@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "description": "Simple fuzzy match on strings",
+  "author": {
+    "name": "Morten Jensen",
+    "email": "mj.95dk@gmail.com"
+  },
   "type": "module",
   "exports": {
     ".": {
