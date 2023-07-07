@@ -27,13 +27,14 @@ jobs:
           cache: "npm"
       - name: Install Dependencies
         run: npm ci
+
       - name: Creating .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
           @jensen95:registry=https://npm.pkg.github.com/:_authToken=$NPM_TOKEN
           EOF
         env:
-          NPM_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
@@ -42,7 +43,7 @@ jobs:
           publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+        #   NPM_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
     #   - name: Send a Slack notification if a publish happens
     #     if: steps.changesets.outputs.published == 'true'
     #     # You can do something when a publish happens.
