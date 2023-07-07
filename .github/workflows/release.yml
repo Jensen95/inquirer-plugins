@@ -43,6 +43,8 @@ jobs:
           cache: "npm"
           registry-url: "https://npm.pkg.github.com"
           scope: "@jensen95"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
