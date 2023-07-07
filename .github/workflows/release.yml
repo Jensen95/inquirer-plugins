@@ -27,7 +27,8 @@ jobs:
           cache: "npm"
       - name: Install Dependencies
         run: npm ci
-
+      - name: Build
+        run: npm run build
       - name: Creating .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
