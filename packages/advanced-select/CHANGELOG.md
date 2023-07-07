@@ -1,5 +1,11 @@
 # advanced-select
 
+## 0.0.3
+
+### Patch Changes
+
+- 82721ba: Adds public to access
+
 ## 0.0.2
 
 ### Patch Changes
