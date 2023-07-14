@@ -1,5 +1,11 @@
 # advanced-select
 
+## 0.1.1
+
+### Patch Changes
+
+- 9c92482: Removes registry url from package.json
+
 ## 0.1.0
 
 ### Minor Changes
