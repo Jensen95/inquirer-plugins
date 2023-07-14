@@ -1,5 +1,11 @@
 # advanced-checkbox
 
+## 0.1.0
+
+### Minor Changes
+
+- b3dfafa: Publish package to NPM
+
 ## 0.0.4
 
 ### Patch Changes
