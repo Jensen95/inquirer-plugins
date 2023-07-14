@@ -29,15 +29,15 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Change to github package repository
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "npm"
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@jensen95"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+      # - name: Change to github package repository
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 18
+      #     cache: "npm"
+      #     registry-url: "https://npm.pkg.github.com"
+      #     scope: "@jensen95"
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
@@ -46,6 +46,7 @@ jobs:
           publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     #   - name: Send a Slack notification if a publish happens
     #     if: steps.changesets.outputs.published == 'true'
     #     # You can do something when a publish happens.
