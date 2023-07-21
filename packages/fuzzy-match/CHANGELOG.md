@@ -10,5 +10,5 @@
 
 ### Patch Changes
 
-- 8e2cb8f: Inital Initial implementaion of fuzzy match
+- 8e2cb8f: Initial Initial implementation of fuzzy match
 - 8878ab2: Export remove score function

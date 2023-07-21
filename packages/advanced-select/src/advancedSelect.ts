@@ -56,7 +56,7 @@ export const advancedCheckboxPrompt = createPrompt(
               isSelectableChoice(choice) && choice.id != null
                 ? choice.id
                 : `INTERNAL_${choiceIndex}`,
-          } as (Separator | AdvancedCheckboxChoice<Value>) & { id: string })
+          }) as (Separator | AdvancedCheckboxChoice<Value>) & { id: string }
       )
     ).current;
 

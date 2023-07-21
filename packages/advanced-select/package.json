@@ -25,12 +25,12 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
+    "fuzzy-match": "*",
     "tsconfig": "*",
     "typescript": "^5.1.6",
     "unbuild": "^1.2.1"
   },
   "dependencies": {
-    "fuzzy-match": "*",
     "@inquirer/core": "^2.3.1",
     "@inquirer/type": "^1.1.0",
     "ansi-escapes": "^6.2.0",
