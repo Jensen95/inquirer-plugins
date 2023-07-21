@@ -1,5 +1,16 @@
 # advanced-select
 
+## 0.2.0
+
+### Minor Changes
+
+- 63448aa: Changes to usePagination instead of Paginator from core
+
+### Patch Changes
+
+- b0cb402: Fix fuzzy-mattch not being inlined in package
+- 523b706: Bump packages
+
 ## 0.1.1
 
 ### Patch Changes

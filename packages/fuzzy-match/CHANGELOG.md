@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- 523b706: Bump packages
+
+## 0.0.2
+
+### Patch Changes
+
 - e122855: Bumping version
 
 ## 0.0.1
