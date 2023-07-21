@@ -3,13 +3,13 @@ import {
   useState,
   useRef,
   useKeypress,
+  usePagination,
   usePrefix,
   isUpKey,
   isDownKey,
   isSpaceKey,
   isBackspaceKey,
   isEnterKey,
-  Paginator,
   Separator,
 } from "@inquirer/core";
 import chalk from "chalk";
@@ -46,7 +46,6 @@ export const advancedCheckboxPrompt = createPrompt(
     done: (value: Array<Value>) => void
   ): string => {
     const { prefix = usePrefix(), instructions, pageSize } = config;
-    const paginator = useRef(new Paginator()).current;
     const initialChoices = useRef(
       config.choices.map(
         (choice, choiceIndex) =>
@@ -233,11 +232,10 @@ export const advancedCheckboxPrompt = createPrompt(
       })
       .join("\n");
 
-    const windowedChoices = paginator.paginate(
-      allChoices,
-      cursorPosition,
-      pageSize
-    );
+    const windowedChoices = usePagination(allChoices, {
+      active: cursorPosition,
+      pageSize,
+    });
     return `${prefix} ${message}${
       search.length > 0 ? " " + chalk.yellow(search) : ""
     }${helpTip}\n${windowedChoices}${ansiEscapes.cursorHide}`;
