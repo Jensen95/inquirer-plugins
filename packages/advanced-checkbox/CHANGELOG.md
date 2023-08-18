@@ -1,5 +1,11 @@
 # advanced-checkbox
 
+## 0.2.1
+
+### Patch Changes
+
+- 7608c00: Updating packages
+
 ## 0.2.0
 
 ### Minor Changes
