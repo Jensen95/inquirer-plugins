@@ -1,5 +1,12 @@
 # advanced-select
 
+## 0.2.2
+
+### Patch Changes
+
+- df8e3bf: Bump packages
+- f7787ca: Bump packages
+
 ## 0.2.1
 
 ### Patch Changes
