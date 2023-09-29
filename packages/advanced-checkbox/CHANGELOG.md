@@ -1,5 +1,13 @@
 # advanced-checkbox
 
+## 0.2.2
+
+### Patch Changes
+
+- 013cdf3: Add clear search shortcut
+- df8e3bf: Bump packages
+- f7787ca: Bump packages
+
 ## 0.2.1
 
 ### Patch Changes
