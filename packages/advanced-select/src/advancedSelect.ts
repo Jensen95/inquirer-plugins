@@ -115,8 +115,6 @@ export const advancedCheckboxPrompt = createPrompt(
 
       if (key.ctrl || key.name === "tab") {
         switch (key.name) {
-          case "backspace":
-          case "delete":
           case "r":
             setSearch("");
             setChoices(initialChoices);

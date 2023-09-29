@@ -145,8 +145,6 @@ export const advancedCheckboxPrompt = createPrompt(
             }
             setSelectedChoices(updatedSelectedChoices);
             return;
-          case "backspace":
-          case "delete":
           case "r":
             setSearch("");
             setChoices(initialChoices);
@@ -214,7 +212,7 @@ export const advancedCheckboxPrompt = createPrompt(
     }
 
     if (search.length > 0) {
-      helpTip = `${chalk.cyan.bold("<ctrl> + <r>")} to clear search`;
+      helpTip = `\n${chalk.cyan.bold("<ctrl> + <r>")} to clear search`;
     }
 
     const allChoices = choices
