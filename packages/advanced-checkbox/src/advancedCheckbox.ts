@@ -147,6 +147,7 @@ export const advancedCheckboxPrompt = createPrompt(
             return;
           case "r":
             setSearch("");
+            return;
           case "tab":
             const inversedSelectedChoices = new Set<string>();
             for (const item of initialChoices) {
