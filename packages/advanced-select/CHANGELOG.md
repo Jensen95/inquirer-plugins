@@ -1,5 +1,11 @@
 # advanced-select
 
+## 0.2.3
+
+### Patch Changes
+
+- 2195dda: Adds support for clearing search
+
 ## 0.2.2
 
 ### Patch Changes

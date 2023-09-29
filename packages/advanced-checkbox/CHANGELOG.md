@@ -1,5 +1,13 @@
 # advanced-checkbox
 
+## 0.2.3
+
+### Patch Changes
+
+- 34b6242: Fixes clear search also slected the items in view
+- 09e0d4f: Adds support for using backspace and delete in combination with ctrl to clear search
+- 4995c4c: Fixes choices not being shown after clear search
+
 ## 0.2.2
 
 ### Patch Changes
