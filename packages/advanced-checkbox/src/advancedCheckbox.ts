@@ -145,6 +145,8 @@ export const advancedCheckboxPrompt = createPrompt(
             }
             setSelectedChoices(updatedSelectedChoices);
             return;
+          case "r":
+            setSearch("");
           case "tab":
             const inversedSelectedChoices = new Set<string>();
             for (const item of initialChoices) {
@@ -163,7 +165,7 @@ export const advancedCheckboxPrompt = createPrompt(
         ? [...search].slice(0, search.length - 1).join("")
         : `${search}${key.name}`;
       setSearch(_search);
-      setShowHelpTip(false);
+      setShowHelpTip(true);
 
       setChoices(
         fuzzyMatch(_search, initialChoices.filter(isSelectableChoice)).map(
@@ -204,6 +206,10 @@ export const advancedCheckboxPrompt = createPrompt(
         ];
         helpTip = ` (Press ${keys.join(", ")})`;
       }
+    }
+
+    if (search.length > 0) {
+      helpTip = `${chalk.cyan.bold("<ctrl> + <r>")} to clear search`;
     }
 
     const allChoices = choices
