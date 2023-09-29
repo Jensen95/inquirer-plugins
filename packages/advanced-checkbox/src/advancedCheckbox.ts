@@ -145,6 +145,8 @@ export const advancedCheckboxPrompt = createPrompt(
             }
             setSelectedChoices(updatedSelectedChoices);
             return;
+          case "backspace":
+          case "delete":
           case "r":
             setSearch("");
             setChoices(initialChoices);
