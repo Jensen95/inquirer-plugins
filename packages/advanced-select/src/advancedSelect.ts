@@ -113,11 +113,25 @@ export const advancedCheckboxPrompt = createPrompt(
         return;
       }
 
+      if (key.ctrl || key.name === "tab") {
+        switch (key.name) {
+          case "backspace":
+          case "delete":
+          case "r":
+            setSearch("");
+            setChoices(initialChoices);
+            setCursorPosition(0);
+            return;
+          default:
+            return;
+        }
+      }
+
       const _search = isBackspaceKey(key)
         ? [...search].slice(0, search.length - 1).join("")
         : `${search}${key.name}`;
       setSearch(_search);
-      setShowHelpTip(false);
+      setShowHelpTip(true);
 
       setChoices(
         fuzzyMatch(_search, initialChoices.filter(isSelectableChoice)).map(
@@ -152,6 +166,10 @@ export const advancedCheckboxPrompt = createPrompt(
         ];
         helpTip = ` (Press ${keys.join(", ")})`;
       }
+    }
+
+    if (search.length > 0) {
+      helpTip = `\n${chalk.cyan.bold("<ctrl> + <r>")} to clear search`;
     }
 
     const allChoices = choices
