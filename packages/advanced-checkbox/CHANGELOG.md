@@ -1,5 +1,11 @@
 # advanced-checkbox
 
+## 0.2.4
+
+### Patch Changes
+
+- 0b74026: Removes delete and backspace as the don't work with ctrl
+
 ## 0.2.3
 
 ### Patch Changes
