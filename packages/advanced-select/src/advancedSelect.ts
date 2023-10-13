@@ -31,13 +31,39 @@ type Config<Value> = {
   pageSize?: number;
   instructions?: string | boolean;
   message: string;
-  choices: ReadonlyArray<AdvancedCheckboxChoice<Value> | Separator>;
+  choices: ReadonlyArray<Item<Value>>;
 };
 
+type Item<Value> = AdvancedCheckboxChoice<Value> | Separator;
+
+interface RenderItemParams<T> {
+  item: Item<T>;
+  isActive: boolean;
+}
 const isSelectableChoice = <T>(
-  choice: undefined | Separator | AdvancedCheckboxChoice<T>
+  choice: undefined | Item<T>
 ): choice is AdvancedCheckboxChoice<T> => {
   return choice != null && !Separator.isSeparator(choice) && !choice.disabled;
+};
+
+const renderItem = <T>({ item, isActive }: RenderItemParams<T>) => {
+  if (Separator.isSeparator(item)) {
+    return ` ${item.separator}`;
+  }
+
+  const line = item.name || item.value;
+  if (item.disabled) {
+    const disabledLabel =
+      typeof item.disabled === "string" ? item.disabled : "(disabled)";
+    return chalk.dim(`- ${line} ${disabledLabel}`);
+  }
+
+  const checkbox = item.checked
+    ? chalk.green(figures.circleFilled)
+    : figures.circle;
+  const color = isActive ? chalk.cyan : (x: string) => x;
+  const prefix = isActive ? figures.pointer : " ";
+  return color(`${prefix}${checkbox} ${line}`);
 };
 
 export const advancedCheckboxPrompt = createPrompt(
@@ -170,30 +196,9 @@ export const advancedCheckboxPrompt = createPrompt(
       helpTip = `\n${chalk.cyan.bold("<ctrl> + <r>")} to clear search`;
     }
 
-    const allChoices = choices
-      .map((choice, index) => {
-        if (Separator.isSeparator(choice)) {
-          return ` ${choice.separator}`;
-        }
-
-        const line = choice.name || choice.value;
-        if (choice.disabled) {
-          const disabledLabel =
-            typeof choice.disabled === "string"
-              ? choice.disabled
-              : "(disabled)";
-          return chalk.dim(`- ${line} ${disabledLabel}`);
-        }
-
-        if (index === cursorPosition) {
-          return chalk.cyan(`${figures.pointer} ${line}`);
-        }
-
-        return ` ${figures.line} ${line}`;
-      })
-      .join("\n");
-
-    const windowedChoices = usePagination(allChoices, {
+    const windowedChoices = usePagination({
+      items: choices,
+      renderItem,
       active: cursorPosition,
       pageSize,
     });
