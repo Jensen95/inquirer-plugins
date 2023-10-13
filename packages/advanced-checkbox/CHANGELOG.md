@@ -1,5 +1,12 @@
 # advanced-checkbox
 
+## 0.2.5
+
+### Patch Changes
+
+- 535d057: Bump pacakge versions
+- 137f93d: Fixes minor package bump results in usePagination interface change
+
 ## 0.2.4
 
 ### Patch Changes
