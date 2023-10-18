@@ -1,5 +1,12 @@
 # advanced-select
 
+## 0.2.6
+
+### Patch Changes
+
+- 961daf0: Upgrades packages
+- b1edb15: Fixes return type being an array
+
 ## 0.2.5
 
 ### Patch Changes
