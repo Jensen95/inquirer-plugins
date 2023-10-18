@@ -17,7 +17,7 @@ import figures from "figures";
 import ansiEscapes from "ansi-escapes";
 import { fuzzyMatch, removeScore } from "fuzzy-match";
 
-export type AdvancedCheckboxChoice<Value> = {
+export type AdvancedSelectChoice<Value> = {
   name?: string;
   value: Value;
   disabled?: boolean | string;
@@ -34,7 +34,7 @@ type Config<Value> = {
   choices: ReadonlyArray<Item<Value>>;
 };
 
-type Item<Value> = AdvancedCheckboxChoice<Value> | Separator;
+type Item<Value> = AdvancedSelectChoice<Value> | Separator;
 
 interface RenderItemParams<T> {
   item: Item<T>;
@@ -42,7 +42,7 @@ interface RenderItemParams<T> {
 }
 const isSelectableChoice = <T>(
   choice: undefined | Item<T>
-): choice is AdvancedCheckboxChoice<T> => {
+): choice is AdvancedSelectChoice<T> => {
   return choice != null && !Separator.isSeparator(choice) && !choice.disabled;
 };
 
@@ -66,10 +66,10 @@ const renderItem = <T>({ item, isActive }: RenderItemParams<T>) => {
   return color(`${prefix}${checkbox} ${line}`);
 };
 
-export const advancedCheckboxPrompt = createPrompt(
+export const advancedSelectPrompt = createPrompt(
   <Value extends unknown>(
     config: Config<Value>,
-    done: (value: Array<Value>) => void
+    done: (value: Value) => void
   ): string => {
     const { prefix = usePrefix(), instructions, pageSize } = config;
     const initialChoices = useRef(
@@ -81,7 +81,7 @@ export const advancedCheckboxPrompt = createPrompt(
               isSelectableChoice(choice) && choice.id != null
                 ? choice.id
                 : `INTERNAL_${choiceIndex}`,
-          }) as (Separator | AdvancedCheckboxChoice<Value>) & { id: string }
+          }) as (Separator | AdvancedSelectChoice<Value>) & { id: string }
       )
     ).current;
 
@@ -111,7 +111,7 @@ export const advancedCheckboxPrompt = createPrompt(
           if (choice) {
             setStatus("done");
             setSelectedId(choice.id);
-            done([choice.value]);
+            done(choice.value);
           }
           return;
         }
@@ -120,7 +120,7 @@ export const advancedCheckboxPrompt = createPrompt(
         done(
           initialChoices
             .filter((item) => selectedId === item.id)
-            .map((choice) => (choice as AdvancedCheckboxChoice<Value>).value)
+            .map((choice) => (choice as AdvancedSelectChoice<Value>).value)[0]
         );
         return;
       }
@@ -172,8 +172,8 @@ export const advancedCheckboxPrompt = createPrompt(
         .filter((item) => selectedId === item.id)
         .map(
           (choice) =>
-            (choice as AdvancedCheckboxChoice<Value>).name ||
-            (choice as AdvancedCheckboxChoice<Value>).value
+            (choice as AdvancedSelectChoice<Value>).name ||
+            (choice as AdvancedSelectChoice<Value>).value
         );
       return `${prefix} ${message} ${chalk.cyan(selection.join(", "))}`;
     }
