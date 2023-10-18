@@ -1,5 +1,11 @@
 # advanced-checkbox
 
+## 0.2.6
+
+### Patch Changes
+
+- 961daf0: Upgrades packages
+
 ## 0.2.5
 
 ### Patch Changes
