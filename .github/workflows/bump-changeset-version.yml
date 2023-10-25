@@ -1,4 +1,4 @@
-name: Bump changesets version on dependency update
+name: Bump changeset version on dependency update
 
 on:
   workflow_dispatch:
@@ -25,12 +25,12 @@ jobs:
 
       - name: Create changeset version file
         run: |
-          changeset=.changeset/$(date +%Y-%m-%d-%H-%M-%S)-dependabot.md
-          # make
+          changeset=.changeset/$(echo $GITHUB_REF | sed 's/refs\/heads\///').md
+          # changeset=.changeset/$(date +%Y-%m-%d-%H-%M-%S)-dependabot.md
+
           touch $changeset
           echo "---" >> $changeset
 
-          # loop over each package in changed-packages.txt
           while read dir; do
             cd $dir
             echo "Bumping changeset version for $dir"
@@ -39,13 +39,12 @@ jobs:
             cd -
             echo "$name: patch" >> $changeset
           done < changed-packages.txt
+
           echo "---" >> $changeset
-          # add empty line to changeset
           echo "" >> $changeset
-          # add last commit message to changeset
-          git log -1 --pretty=%B >> $changeset
+          git log -1 --oneline --pretty=%B >> $changeset
           echo "" >> $changeset
-          # Set git user to last commit
+
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git add $changeset
