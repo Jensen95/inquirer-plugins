@@ -1,5 +1,11 @@
 # advanced-checkbox
 
+## 0.2.7
+
+### Patch Changes
+
+- ff060d7: Fixes empty results breaking prompt
+
 ## 0.2.6
 
 ### Patch Changes
