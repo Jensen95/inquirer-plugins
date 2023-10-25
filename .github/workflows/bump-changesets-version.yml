@@ -1,0 +1,52 @@
+name: Bump changesets version on dependency update
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - dependabot-* # Dependabot PRs
+
+jobs:
+  bump:
+    name: Bump changesets version on dependency update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changes
+        run: |
+          git diff HEAD^^  --name-only --diff-filter=AM | grep -E 'package.json' | xargs -I {} dirname {} | sort | uniq > changed-packages.txt
+          cat changed-packages.txt
+
+      - name: Create changeset version file
+        run: |
+          changeset=.changeset/$(date +%Y-%m-%d-%H-%M-%S)-dependabot.md
+          # make
+          touch $changeset
+          echo "---" >> $changeset
+
+          # loop over each package in changed-packages.txt
+          while read dir; do
+            cd $dir
+            echo "Bumping changeset version for $dir"
+            # get package name from package.json
+            name=$(node -p "require('./package.json').name")
+            cd -
+            echo "$name: patch" >> $changeset
+          done < changed-packages.txt
+          echo "---" >> $changeset
+          # add empty line to changeset
+          echo "" >> $changeset
+          # add last commit message to changeset
+          git log -1 --pretty=%B >> $changeset
+          echo "" >> $changeset
+          # Set git user to last commit
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add $changeset
+          git commit --amend --no-edit
+          git push -f
