@@ -41,12 +41,16 @@ interface RenderItemParams<T> {
   isActive: boolean;
 }
 const isSelectableChoice = <T>(
-  choice: undefined | Item<T>
+  choice: undefined | Item<T>,
 ): choice is AdvancedSelectChoice<T> => {
   return choice != null && !Separator.isSeparator(choice) && !choice.disabled;
 };
 
-const renderItem = <T>({ item, isActive }: RenderItemParams<T>) => {
+const renderItem = <T>(renderItem?: RenderItemParams<T>) => {
+  if (renderItem == null) {
+    return "";
+  }
+  const { item, isActive } = renderItem;
   if (Separator.isSeparator(item)) {
     return ` ${item.separator}`;
   }
@@ -58,9 +62,7 @@ const renderItem = <T>({ item, isActive }: RenderItemParams<T>) => {
     return chalk.dim(`- ${line} ${disabledLabel}`);
   }
 
-  const checkbox = item.checked
-    ? chalk.green(figures.circleFilled)
-    : figures.circle;
+  const checkbox = figures.dot;
   const color = isActive ? chalk.cyan : (x: string) => x;
   const prefix = isActive ? figures.pointer : " ";
   return color(`${prefix}${checkbox} ${line}`);
@@ -69,7 +71,7 @@ const renderItem = <T>({ item, isActive }: RenderItemParams<T>) => {
 export const advancedSelectPrompt = createPrompt(
   <Value extends unknown>(
     config: Config<Value>,
-    done: (value: Value) => void
+    done: (value: Value) => void,
   ): string => {
     const { prefix = usePrefix(), instructions, pageSize } = config;
     const initialChoices = useRef(
@@ -81,8 +83,8 @@ export const advancedSelectPrompt = createPrompt(
               isSelectableChoice(choice) && choice.id != null
                 ? choice.id
                 : `INTERNAL_${choiceIndex}`,
-          }) as (Separator | AdvancedSelectChoice<Value>) & { id: string }
-      )
+          }) as (Separator | AdvancedSelectChoice<Value>) & { id: string },
+      ),
     ).current;
 
     const [status, setStatus] = useState<"pending" | "done">("pending");
@@ -120,7 +122,7 @@ export const advancedSelectPrompt = createPrompt(
         done(
           initialChoices
             .filter((item) => selectedId === item.id)
-            .map((choice) => (choice as AdvancedSelectChoice<Value>).value)[0]
+            .map((choice) => (choice as AdvancedSelectChoice<Value>).value)[0],
         );
         return;
       }
@@ -159,8 +161,8 @@ export const advancedSelectPrompt = createPrompt(
 
       setChoices(
         fuzzyMatch(_search, initialChoices.filter(isSelectableChoice)).map(
-          removeScore
-        )
+          removeScore,
+        ),
       );
       setCursorPosition(0);
     });
@@ -173,7 +175,7 @@ export const advancedSelectPrompt = createPrompt(
         .map(
           (choice) =>
             (choice as AdvancedSelectChoice<Value>).name ||
-            (choice as AdvancedSelectChoice<Value>).value
+            (choice as AdvancedSelectChoice<Value>).value,
         );
       return `${prefix} ${message} ${chalk.cyan(selection.join(", "))}`;
     }
@@ -185,7 +187,7 @@ export const advancedSelectPrompt = createPrompt(
       } else {
         const keys = [
           `${chalk.cyan.bold("<space>")} or ${chalk.cyan.bold(
-            "<enter>"
+            "<enter>",
           )} to select and proceed`,
         ];
         helpTip = ` (Press ${keys.join(", ")})`;
@@ -205,7 +207,7 @@ export const advancedSelectPrompt = createPrompt(
     return `${prefix} ${message}${
       search.length > 0 ? " " + chalk.yellow(search) : ""
     }${helpTip}\n${windowedChoices}${ansiEscapes.cursorHide}`;
-  }
+  },
 );
 
 export { Separator };
