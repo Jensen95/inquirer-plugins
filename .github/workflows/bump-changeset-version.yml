@@ -27,7 +27,7 @@ jobs:
         run: |
           changeset=.changeset/$(echo $GITHUB_REF | sed 's/refs\/heads\///').md
           # changeset=.changeset/$(date +%Y-%m-%d-%H-%M-%S)-dependabot.md
-
+          rm -f $changeset
           touch $changeset
           echo "---" >> $changeset
 
