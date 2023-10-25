@@ -1,6 +1,7 @@
 name: Bump changesets version on dependency update
 
 on:
+  workflow_dispatch:
   pull_request:
     types:
       - opened
