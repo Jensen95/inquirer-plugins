@@ -9,7 +9,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@turbo/gen": "^1.10.15",
+    "@turbo/gen": "^1.10.16",
     "eslint": "^8.52.0",
     "eslint-config-custom": "*",
     "prettier": "^3.0.3",
