@@ -23,4 +23,4 @@ updates:
     reviewers:
       - "@jensen95"
     pull-request-branch-name:
-      separator: "-"
+      separator: "/"
