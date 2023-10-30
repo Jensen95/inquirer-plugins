@@ -1,5 +1,11 @@
 # advanced-select
 
+## 0.2.8
+
+### Patch Changes
+
+- 0e5dac6: Bump figures from 5.0.0 to 6.0.1
+
 ## 0.2.7
 
 ### Patch Changes
