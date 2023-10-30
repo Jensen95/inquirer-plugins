@@ -7,7 +7,7 @@ on:
       - opened
       - synchronize
     branches:
-      - dependabot-* # Dependabot PRs
+      - dependabot-** # Dependabot PRs
 
 jobs:
   bump:
@@ -43,7 +43,7 @@ jobs:
 
           echo "---" >> $changeset
           echo "" >> $changeset
-          git log -1 --oneline --pretty=%B >> $changeset
+          git log -1 --pretty=%s >> $changeset
           echo "" >> $changeset
 
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
