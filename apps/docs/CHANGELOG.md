@@ -1,5 +1,13 @@
 # docs
 
+## 1.0.3
+
+### Patch Changes
+
+- 5dd9e4d: Bump next from 13.5.6 to 14.0.0
+- ce7eb5f: Bump @types/node from 20.8.8 to 20.8.9
+- 843a435: Bump @types/react from 18.2.31 to 18.2.33
+
 ## 1.0.2
 
 ### Patch Changes
