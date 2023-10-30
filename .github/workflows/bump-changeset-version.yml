@@ -38,16 +38,16 @@ jobs:
             # get package name from package.json
             name=$(node -p "require('./package.json').name")
             cd -
-            echo "$name: patch" >> $changeset
+            echo "\"$name\": patch" >> $changeset
           done < changed-packages.txt
 
           echo "---" >> $changeset
           echo "" >> $changeset
           git log -1 --pretty=%s >> $changeset
           echo "" >> $changeset
-
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git add $changeset
-          git commit --amend --no-edit
-          git push -f
+          cat $changeset
+          # git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # git config --global user.name "github-actions[bot]"
+          # git add $changeset
+          # git commit --amend --no-edit
+          # git push -f
