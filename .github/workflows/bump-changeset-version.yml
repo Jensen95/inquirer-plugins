@@ -49,4 +49,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git add $changeset
           git commit --amend --no-edit
-          git push -f
+          git show HEAD
+          git push -f origin HEAD:dependabot/$(echo $GITHUB_REF | sed 's/refs\/heads\///')
