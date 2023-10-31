@@ -1,5 +1,11 @@
 # eslint-config-custom
 
+## 0.0.4
+
+### Patch Changes
+
+- 8ac957e: Bump eslint-config-next from 14.0.0 to 14.0.1
+
 ## 0.0.3
 
 ### Patch Changes

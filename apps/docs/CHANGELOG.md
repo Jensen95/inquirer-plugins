@@ -1,5 +1,11 @@
 # docs
 
+## 1.0.4
+
+### Patch Changes
+
+- 5ccf984: Bump next from 14.0.0 to 14.0.1
+
 ## 1.0.3
 
 ### Patch Changes
