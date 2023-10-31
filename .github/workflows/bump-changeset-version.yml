@@ -6,12 +6,11 @@ on:
     types:
       - opened
       - synchronize
-    branches:
-      - dependabot/** # Dependabot PRs
 
 jobs:
   bump:
     name: Bump changesets version on dependency update
+    if:  startsWith(github.head_ref, 'dependabot-')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
