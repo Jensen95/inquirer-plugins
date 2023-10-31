@@ -2,10 +2,9 @@ name: Bump changeset version on dependency update
 
 on:
   workflow_dispatch:
-  pull_request:
-    types:
-      - opened
-      - synchronize
+  push:
+    branches:
+      - dependabot-*
 
 jobs:
   bump:
