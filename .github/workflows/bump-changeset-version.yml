@@ -5,7 +5,8 @@ on:
   push:
     branches:
       - dependabot-**
-
+permissions:
+  contents: write
 jobs:
   bump:
     name: Bump changesets version on dependency update
