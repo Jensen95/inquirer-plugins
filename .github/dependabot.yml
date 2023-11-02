@@ -2,12 +2,9 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     versioning-strategy: increase
-    directory: "/"
+    directory: "-"
     schedule:
       interval: "daily"
-    labels:
-      - "dependencies"
-      - "testing"
     open-pull-requests-limit: 100
     pull-request-branch-name:
       separator: "/"
