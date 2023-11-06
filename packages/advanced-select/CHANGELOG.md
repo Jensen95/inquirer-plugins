@@ -1,5 +1,11 @@
 # advanced-select
 
+## 0.2.9
+
+### Patch Changes
+
+- f6f4396: Removes dot figure
+
 ## 0.2.8
 
 ### Patch Changes
