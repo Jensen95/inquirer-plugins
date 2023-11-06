@@ -48,7 +48,7 @@ const isSelectableChoice = <T>(
 
 const renderItem = <T>(renderItem?: RenderItemParams<T>) => {
   if (renderItem == null) {
-    return "";
+    return "No results found";
   }
   const { item, isActive } = renderItem;
   if (Separator.isSeparator(item)) {
@@ -62,10 +62,9 @@ const renderItem = <T>(renderItem?: RenderItemParams<T>) => {
     return chalk.dim(`- ${line} ${disabledLabel}`);
   }
 
-  const checkbox = figures.dot;
   const color = isActive ? chalk.cyan : (x: string) => x;
   const prefix = isActive ? figures.pointer : " ";
-  return color(`${prefix}${checkbox} ${line}`);
+  return color(`${prefix} ${line}`);
 };
 
 export const advancedSelectPrompt = createPrompt(
