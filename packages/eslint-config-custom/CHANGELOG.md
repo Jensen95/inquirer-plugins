@@ -1,5 +1,11 @@
 # eslint-config-custom
 
+## 0.0.5
+
+### Patch Changes
+
+- [#168](https://github.com/Jensen95/inquirer-plugins/pull/168) [`6dde9b4`](https://github.com/Jensen95/inquirer-plugins/commit/6dde9b4a9aa874fb5abebe5f4d70b8c8fd0b175d) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.0.1 to 14.0.3
+
 ## 0.0.4
 
 ### Patch Changes
