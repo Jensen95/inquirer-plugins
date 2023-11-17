@@ -1,5 +1,17 @@
 # docs
 
+## 1.0.5
+
+### Patch Changes
+
+- [#167](https://github.com/Jensen95/inquirer-plugins/pull/167) [`5dbde40`](https://github.com/Jensen95/inquirer-plugins/commit/5dbde40a180b6bc7fca095b6c2f77d28fa2a7fc7) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump next from 14.0.1 to 14.0.3
+
+- [#173](https://github.com/Jensen95/inquirer-plugins/pull/173) [`28cf6ea`](https://github.com/Jensen95/inquirer-plugins/commit/28cf6eab57c9b64a0b6b66f0efe138c601aed381) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @types/node from 20.8.9 to 20.9.1
+
+- [#171](https://github.com/Jensen95/inquirer-plugins/pull/171) [`c2f3161`](https://github.com/Jensen95/inquirer-plugins/commit/c2f3161b99cfe62eda043e3be69e891fbde39f19) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @types/react from 18.2.33 to 18.2.37
+
+- [#170](https://github.com/Jensen95/inquirer-plugins/pull/170) [`1a7ab80`](https://github.com/Jensen95/inquirer-plugins/commit/1a7ab803f01b52ea379326f0218f6b076282c028) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @types/react-dom from 18.2.14 to 18.2.15
+
 ## 1.0.4
 
 ### Patch Changes

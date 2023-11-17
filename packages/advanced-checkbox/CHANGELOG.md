@@ -1,5 +1,13 @@
 # advanced-checkbox
 
+## 0.2.9
+
+### Patch Changes
+
+- [#172](https://github.com/Jensen95/inquirer-plugins/pull/172) [`43c0872`](https://github.com/Jensen95/inquirer-plugins/commit/43c0872b7e250359e5688c17a1011c984e2bd0d8) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 8.52.0 to 8.53.0
+
+- [#169](https://github.com/Jensen95/inquirer-plugins/pull/169) [`ef9acd8`](https://github.com/Jensen95/inquirer-plugins/commit/ef9acd860c9941a04f0d34796f5e9d6987ed24f2) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 5.1.0 to 5.1.1
+
 ## 0.2.8
 
 ### Patch Changes
