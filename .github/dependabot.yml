@@ -8,7 +8,7 @@ updates:
       interval: "daily"
     open-pull-requests-limit: 100
     pull-request-branch-name:
-      separator: "-"
+      separator: "/"
     reviewers:
       - "@jensen95"
   - package-ecosystem: "npm"
