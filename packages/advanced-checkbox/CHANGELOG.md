@@ -1,5 +1,11 @@
 # advanced-checkbox
 
+## 0.2.10
+
+### Patch Changes
+
+- [`f7c85ad`](https://github.com/Jensen95/inquirer-plugins/commit/f7c85ad48f3ac944aa49cecc361a0ce56cce35e6) Thanks [@Jensen95](https://github.com/Jensen95)! - Fixes selected items not displayed as such
+
 ## 0.2.9
 
 ### Patch Changes
