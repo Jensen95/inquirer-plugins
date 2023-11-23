@@ -246,7 +246,10 @@ export const advancedCheckboxPrompt = createPrompt(
     }
 
     const windowedChoices = usePagination({
-      items: choices,
+      items: choices.map((choice) => ({
+        ...choice,
+        checked: selectedChoices.has(choice.id),
+      })),
       active: cursorPosition,
       renderItem,
       pageSize,
