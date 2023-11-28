@@ -3,7 +3,7 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     versioning-strategy: increase
-    directory: "/packages/**"
+    directory: "/packages"
     schedule:
       interval: "daily"
     labels:
