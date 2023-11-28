@@ -3,17 +3,7 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     versioning-strategy: increase
-    directory: "/"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 100
-    pull-request-branch-name:
-      separator: "/"
-    reviewers:
-      - "@jensen95"
-  - package-ecosystem: "npm"
-    versioning-strategy: increase
-    directory: "/packages/**/*"
+    directory: "/packages/**"
     schedule:
       interval: "daily"
     labels:
@@ -23,6 +13,16 @@ updates:
       - "@jensen95"
     pull-request-branch-name:
       separator: "-"
+  - package-ecosystem: "npm"
+    versioning-strategy: increase
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 100
+    pull-request-branch-name:
+      separator: "/"
+    reviewers:
+      - "@jensen95"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
