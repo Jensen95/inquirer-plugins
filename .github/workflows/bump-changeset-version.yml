@@ -19,7 +19,7 @@ jobs:
 
       - name: Get changes
         run: |
-          git diff HEAD^^  --name-only --diff-filter=AM | grep -E 'package.json' | xargs -I {} dirname {} | sort | uniq > changed-packages.txt
+          git diff HEAD^^  --name-only --diff-filter=AM | grep -E 'packages\/.*\/package.json' | xargs -I {} dirname {} | sort | uniq > changed-packages.txt
           cat changed-packages.txt
 
       - name: Create changeset version file
