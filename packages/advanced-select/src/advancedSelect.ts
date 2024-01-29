@@ -29,7 +29,7 @@ export type AdvancedSelectChoice<Value> = {
 
 type Config<Value> = {
   prefix?: string;
-  pageSize?: number;
+  pageSize: number;
   instructions?: string | boolean;
   message: string;
   choices: ReadonlyArray<Item<Value>>;
