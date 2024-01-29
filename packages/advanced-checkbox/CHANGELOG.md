@@ -1,5 +1,21 @@
 # advanced-checkbox
 
+## 0.3.0
+
+### Minor Changes
+
+- [`03475cb`](https://github.com/Jensen95/inquirer-plugins/commit/03475cbadfab8d049ca84c920ff52749cc515830) Thanks [@Jensen95](https://github.com/Jensen95)! - Adds required pagesize to config
+
+### Patch Changes
+
+- [#205](https://github.com/Jensen95/inquirer-plugins/pull/205) [`78db039`](https://github.com/Jensen95/inquirer-plugins/commit/78db039451e6249e72a1ef92c97c3607c329f02f) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 8.55.0 to 8.56.0
+
+- [#211](https://github.com/Jensen95/inquirer-plugins/pull/211) [`662db75`](https://github.com/Jensen95/inquirer-plugins/commit/662db75c5cc1a2307da7c10bfcdc0860a019e517) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 5.1.1 to 6.0.0
+
+- [#213](https://github.com/Jensen95/inquirer-plugins/pull/213) [`d7f3eaa`](https://github.com/Jensen95/inquirer-plugins/commit/d7f3eaa149d7075a00da364d6e4f342223a5a67c) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump prettier from 3.2.2 to 3.2.4
+
+- [`28eb2e3`](https://github.com/Jensen95/inquirer-plugins/commit/28eb2e34a1ebda272ee39cb51f2f633de7ba2593) Thanks [@Jensen95](https://github.com/Jensen95)! - Adding check if it's a vim binding for up and down
+
 ## 0.2.11
 
 ### Patch Changes
