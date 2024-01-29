@@ -1,0 +1,17 @@
+{
+  "name": "is-vim-arrow-binding",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^5.3.3"
+  }
+}
