@@ -1,5 +1,21 @@
 # advanced-checkbox
 
+## 0.2.11
+
+### Patch Changes
+
+- [#191](https://github.com/Jensen95/inquirer-plugins/pull/191) [`5dc1dcb`](https://github.com/Jensen95/inquirer-plugins/commit/5dc1dcbb771da83e3ac92950901c0dbe17cd82c0) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @changesets/cli from 2.27.0 to 2.27.1
+
+- [#193](https://github.com/Jensen95/inquirer-plugins/pull/193) [`8570e59`](https://github.com/Jensen95/inquirer-plugins/commit/8570e59181ee80b023128a8f48105edc5c3a209f) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 8.54.0 to 8.55.0
+
+- [#200](https://github.com/Jensen95/inquirer-plugins/pull/200) [`701cda3`](https://github.com/Jensen95/inquirer-plugins/commit/701cda3c4fcd6b4a0e748b08f35f8008980598ff) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.0.3 to 14.0.4
+
+- [#212](https://github.com/Jensen95/inquirer-plugins/pull/212) [`72ae810`](https://github.com/Jensen95/inquirer-plugins/commit/72ae8101cb52c13b0b20eb4465d384ad8aa16b63) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/type from 1.1.5 to 1.1.6
+
+- [#204](https://github.com/Jensen95/inquirer-plugins/pull/204) [`652aa4d`](https://github.com/Jensen95/inquirer-plugins/commit/652aa4da3167048b042682f18783dd52cd7eafc8) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 1.10.16 to 1.11.2
+
+- [#199](https://github.com/Jensen95/inquirer-plugins/pull/199) [`cb17aa1`](https://github.com/Jensen95/inquirer-plugins/commit/cb17aa17ac0de8650b156be05ae95413a01d0d37) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.3.2 to 5.3.3
+
 ## 0.2.10
 
 ### Patch Changes
