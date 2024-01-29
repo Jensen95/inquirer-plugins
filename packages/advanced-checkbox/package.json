@@ -25,6 +25,7 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-custom": "*",
+    "is-vim-arrow-binding": "*",
     "fuzzy-match": "*",
     "tsconfig": "*",
     "typescript": "^5.3.3",

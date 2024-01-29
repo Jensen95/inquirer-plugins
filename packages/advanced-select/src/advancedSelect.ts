@@ -16,6 +16,7 @@ import chalk from "chalk";
 import figures from "figures";
 import ansiEscapes from "ansi-escapes";
 import { fuzzyMatch, removeScore } from "fuzzy-match";
+import { isVimArrowBinding } from "is-vim-arrow-binding";
 
 export type AdvancedSelectChoice<Value> = {
   name?: string;
@@ -126,7 +127,7 @@ export const advancedSelectPrompt = createPrompt(
         return;
       }
 
-      if (isUpKey(key) || isDownKey(key)) {
+      if (!isVimArrowBinding(key) && (isUpKey(key) || isDownKey(key))) {
         const offset = isUpKey(key) ? -1 : 1;
         let selectedOption;
 

@@ -26,6 +26,7 @@
     "eslint": "^8.56.0",
     "eslint-config-custom": "*",
     "fuzzy-match": "*",
+    "is-vim-arrow-binding": "*",
     "tsconfig": "*",
     "typescript": "^5.3.3",
     "unbuild": "^2.0.0"
