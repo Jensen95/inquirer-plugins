@@ -1,5 +1,13 @@
 # eslint-config-custom
 
+## 0.0.7
+
+### Patch Changes
+
+- [#205](https://github.com/Jensen95/inquirer-plugins/pull/205) [`78db039`](https://github.com/Jensen95/inquirer-plugins/commit/78db039451e6249e72a1ef92c97c3607c329f02f) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 8.55.0 to 8.56.0
+
+- [#211](https://github.com/Jensen95/inquirer-plugins/pull/211) [`662db75`](https://github.com/Jensen95/inquirer-plugins/commit/662db75c5cc1a2307da7c10bfcdc0860a019e517) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 5.1.1 to 6.0.0
+
 ## 0.0.6
 
 ### Patch Changes
