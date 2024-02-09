@@ -1,0 +1,31 @@
+on: issue_comment
+
+jobs:
+  pr_commented:
+    name: Recreate dependabot
+    if: ${{ github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Find Dependabot Comment
+        uses: peter-evans/find-comment@v3
+        id: fc
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body-includes: but since this PR has been edited by someone other than Dependabot I haven't updated it. You'll get a PR for the updated version as normal once this PR is merged.
+          direction: last
+      - run: |
+          echo ${{ steps.fc.outputs.comment-id }}
+          echo ${{ steps.fc.outputs.comment-body }}
+          echo ${{ steps.fc.outputs.comment-author }}
+          echo ${{ steps.fc.outputs.comment-created-at }}
+      - name: Create recreate comment
+        if: steps.fc.outputs.comment-id != ''
+        uses: peter-evans/create-or-update-comment@v4
+        id: couc
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            @dependabot recreate
