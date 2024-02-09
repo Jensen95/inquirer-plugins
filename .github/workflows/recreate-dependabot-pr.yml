@@ -1,4 +1,5 @@
 on: issue_comment
+name: Recreate Dependabot PRs on updates
 
 jobs:
   pr_commented:
@@ -8,6 +9,7 @@ jobs:
     permissions:
       contents: read
       issues: write
+      pull-requests: read
     steps:
       - name: Find Dependabot Comment
         uses: peter-evans/find-comment@v3
