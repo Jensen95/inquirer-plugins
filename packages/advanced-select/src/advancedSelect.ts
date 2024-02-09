@@ -73,7 +73,11 @@ export const advancedSelectPrompt = createPrompt(
     config: Config<Value>,
     done: (value: Value) => void,
   ): string => {
-    const { prefix = usePrefix(), instructions, pageSize } = config;
+    const {
+      prefix = usePrefix({ isLoading: false }),
+      instructions,
+      pageSize,
+    } = config;
     const initialChoices = useRef(
       config.choices.map(
         (choice, choiceIndex) =>

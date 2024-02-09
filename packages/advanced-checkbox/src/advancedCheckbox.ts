@@ -11,6 +11,7 @@ import {
   isBackspaceKey,
   isEnterKey,
   Separator,
+  Theme,
 } from "@inquirer/core";
 import chalk from "chalk";
 import figures from "figures";
@@ -76,7 +77,11 @@ export const advancedCheckboxPrompt = createPrompt(
     config: Config<Value>,
     done: (value: Array<Value>) => void,
   ): string => {
-    const { prefix = usePrefix(), instructions, pageSize } = config;
+    const {
+      prefix = usePrefix({ isLoading: false }),
+      instructions,
+      pageSize,
+    } = config;
     const initialChoices = useRef(
       config.choices.map(
         (choice, choiceIndex) =>
