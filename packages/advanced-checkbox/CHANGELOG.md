@@ -1,5 +1,15 @@
 # advanced-checkbox
 
+## 0.3.1
+
+### Patch Changes
+
+- [#220](https://github.com/Jensen95/inquirer-plugins/pull/220) [`14cd867`](https://github.com/Jensen95/inquirer-plugins/commit/14cd867fd9aae30d791935ac06644b5ed7761aff) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 6.0.0 to 7.0.0
+
+- [#218](https://github.com/Jensen95/inquirer-plugins/pull/218) [`2dafb47`](https://github.com/Jensen95/inquirer-plugins/commit/2dafb47ea4f95dd0b067580c4f8ef59072526443) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump prettier from 3.2.4 to 3.2.5
+
+- [#217](https://github.com/Jensen95/inquirer-plugins/pull/217) [`f699751`](https://github.com/Jensen95/inquirer-plugins/commit/f69975149e144c59fca9bcbd349049b7f9d928e7) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 1.11.3 to 1.12.0
+
 ## 0.3.0
 
 ### Minor Changes
