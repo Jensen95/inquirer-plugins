@@ -28,7 +28,7 @@
     "fuzzy-match": "*",
     "is-vim-arrow-binding": "*",
     "tsconfig": "*",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.2",
     "unbuild": "^2.0.0"
   },
   "dependencies": {
