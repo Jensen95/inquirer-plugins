@@ -1,5 +1,15 @@
 # eslint-config-custom
 
+## 0.0.9
+
+### Patch Changes
+
+- [#236](https://github.com/Jensen95/inquirer-plugins/pull/236) [`842a385`](https://github.com/Jensen95/inquirer-plugins/commit/842a3854d98e46c27ed1a9bc0938f2ec2cb0d078) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.1.0 to 14.1.3
+
+- [#234](https://github.com/Jensen95/inquirer-plugins/pull/234) [`08065d7`](https://github.com/Jensen95/inquirer-plugins/commit/08065d724cab39b311ad75b1ca9cb76131da009e) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.12.3 to 1.12.5
+
+- [#233](https://github.com/Jensen95/inquirer-plugins/pull/233) [`379e34b`](https://github.com/Jensen95/inquirer-plugins/commit/379e34b2e181c2b95ab407060ad5371d10673ea6) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-react from 7.33.2 to 7.34.0
+
 ## 0.0.8
 
 ### Patch Changes
