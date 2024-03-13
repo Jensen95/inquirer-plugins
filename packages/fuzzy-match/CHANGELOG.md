@@ -1,5 +1,11 @@
 # fuzzy-match
 
+## 0.0.5
+
+### Patch Changes
+
+- [#241](https://github.com/Jensen95/inquirer-plugins/pull/241) [`9f95235`](https://github.com/Jensen95/inquirer-plugins/commit/9f952358a95526f2112413dcf3168af261646117) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 7.0.2 to 7.1.0
+
 ## 0.0.4
 
 ### Patch Changes
