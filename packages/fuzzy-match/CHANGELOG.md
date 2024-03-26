@@ -1,5 +1,13 @@
 # fuzzy-match
 
+## 0.0.6
+
+### Patch Changes
+
+- [#243](https://github.com/Jensen95/inquirer-plugins/pull/243) [`538850c`](https://github.com/Jensen95/inquirer-plugins/commit/538850c1664fa97a0002bc1fc7180e7986b7d9fb) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-react from 7.34.0 to 7.34.1
+
+- [#246](https://github.com/Jensen95/inquirer-plugins/pull/246) [`d370220`](https://github.com/Jensen95/inquirer-plugins/commit/d37022083600e9ce35955b490ab735fb0687cafe) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.4.2 to 5.4.3
+
 ## 0.0.5
 
 ### Patch Changes
