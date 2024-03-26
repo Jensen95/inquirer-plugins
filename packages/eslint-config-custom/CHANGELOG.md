@@ -1,5 +1,23 @@
 # eslint-config-custom
 
+## 0.0.11
+
+### Patch Changes
+
+- [#250](https://github.com/Jensen95/inquirer-plugins/pull/250) [`45b7ca7`](https://github.com/Jensen95/inquirer-plugins/commit/45b7ca7cc93d3527c72480cce8f27840476eb2ec) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump ansi-escapes from 6.2.0 to 6.2.1
+
+- [#245](https://github.com/Jensen95/inquirer-plugins/pull/245) [`645333a`](https://github.com/Jensen95/inquirer-plugins/commit/645333a3bd73dd42dca3809382ca03b800985763) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.1.3 to 14.1.4
+
+- [#248](https://github.com/Jensen95/inquirer-plugins/pull/248) [`32a2073`](https://github.com/Jensen95/inquirer-plugins/commit/32a2073f0ff315b6b747321cf519f04de1ad7c41) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.12.5 to 1.13.0
+
+- [#243](https://github.com/Jensen95/inquirer-plugins/pull/243) [`538850c`](https://github.com/Jensen95/inquirer-plugins/commit/538850c1664fa97a0002bc1fc7180e7986b7d9fb) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-react from 7.34.0 to 7.34.1
+
+- [#249](https://github.com/Jensen95/inquirer-plugins/pull/249) [`1a2cdcf`](https://github.com/Jensen95/inquirer-plugins/commit/1a2cdcfa866a6252bc2cdc74c93c51d650ea57e8) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump turbo from 1.12.5 to 1.13.0
+
+- [#247](https://github.com/Jensen95/inquirer-plugins/pull/247) [`26d6454`](https://github.com/Jensen95/inquirer-plugins/commit/26d64547f0a3b9a411c228b3a081d07afd30a367) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 1.12.5 to 1.13.0
+
+- [#246](https://github.com/Jensen95/inquirer-plugins/pull/246) [`d370220`](https://github.com/Jensen95/inquirer-plugins/commit/d37022083600e9ce35955b490ab735fb0687cafe) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.4.2 to 5.4.3
+
 ## 0.0.10
 
 ### Patch Changes
