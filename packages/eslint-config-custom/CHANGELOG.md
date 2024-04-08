@@ -1,5 +1,17 @@
 # eslint-config-custom
 
+## 0.0.12
+
+### Patch Changes
+
+- [#252](https://github.com/Jensen95/inquirer-plugins/pull/252) [`d792beb`](https://github.com/Jensen95/inquirer-plugins/commit/d792bebd6268066ee61245585bb56cedc2e53f4c) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.13.0 to 1.13.1
+
+- [#258](https://github.com/Jensen95/inquirer-plugins/pull/258) [`7df431e`](https://github.com/Jensen95/inquirer-plugins/commit/7df431e1ac6e361c3de035c5502913800b72843c) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.13.1 to 1.13.2
+
+- [#253](https://github.com/Jensen95/inquirer-plugins/pull/253) [`e024e15`](https://github.com/Jensen95/inquirer-plugins/commit/e024e15758155e1a76397d3e6be5452a4fd7ce0f) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump turbo from 1.13.0 to 1.13.1
+
+- [#254](https://github.com/Jensen95/inquirer-plugins/pull/254) [`298035e`](https://github.com/Jensen95/inquirer-plugins/commit/298035ed6726a47d2c53b676a22db06b4e61235b) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 1.13.0 to 1.13.1
+
 ## 0.0.11
 
 ### Patch Changes
