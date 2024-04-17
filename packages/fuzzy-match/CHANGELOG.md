@@ -1,5 +1,15 @@
 # fuzzy-match
 
+## 0.0.8
+
+### Patch Changes
+
+- [#266](https://github.com/Jensen95/inquirer-plugins/pull/266) [`84b3521`](https://github.com/Jensen95/inquirer-plugins/commit/84b3521a61d08b23e6b102e8105dfdb4081cec54) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.1.4 to 14.2.1
+
+- [#267](https://github.com/Jensen95/inquirer-plugins/pull/267) [`7526ea7`](https://github.com/Jensen95/inquirer-plugins/commit/7526ea78b61094857d0a65019feb5a1e9459ff20) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 7.1.2 to 8.0.1
+
+- [#262](https://github.com/Jensen95/inquirer-plugins/pull/262) [`d0f60f2`](https://github.com/Jensen95/inquirer-plugins/commit/d0f60f2141b7b31f8e22e7d23fde1ed653b0b93b) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.4.4 to 5.4.5
+
 ## 0.0.7
 
 ### Patch Changes
