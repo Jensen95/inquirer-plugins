@@ -23,7 +23,7 @@
     "build": "unbuild"
   },
   "devDependencies": {
-    "eslint": "^9.0.0",
+    "eslint": "^9.1.0",
     "eslint-config-custom": "*",
     "is-vim-arrow-binding": "*",
     "fuzzy-match": "*",
