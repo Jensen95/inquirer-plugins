@@ -13,7 +13,7 @@
     "eslint": "^9.0.0",
     "eslint-config-custom": "*",
     "prettier": "^3.2.5",
-    "turbo": "^1.13.2"
+    "turbo": "^1.13.3"
   },
   "name": "inquirer-plugins",
   "packageManager": "npm@9.5.1",
