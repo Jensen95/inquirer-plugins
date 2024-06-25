@@ -1,5 +1,11 @@
 # advanced-checkbox
 
+## 0.3.8
+
+### Patch Changes
+
+- [`445f60b`](https://github.com/Jensen95/inquirer-plugins/commit/445f60b398cf528a868a58b85d6a2ade49f9a949) Thanks [@Jensen95](https://github.com/Jensen95)! - Bump
+
 ## 0.3.7
 
 ### Patch Changes
