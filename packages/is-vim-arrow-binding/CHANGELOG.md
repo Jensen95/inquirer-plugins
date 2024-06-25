@@ -1,5 +1,21 @@
 # is-vim-arrow-binding
 
+## 0.0.8
+
+### Patch Changes
+
+- [#272](https://github.com/Jensen95/inquirer-plugins/pull/272) [`fa9b59a`](https://github.com/Jensen95/inquirer-plugins/commit/fa9b59a9a36de76d3cb2b5e3898e1166371e880a) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.2.1 to 14.2.3
+
+- [#273](https://github.com/Jensen95/inquirer-plugins/pull/273) [`bfb564a`](https://github.com/Jensen95/inquirer-plugins/commit/bfb564a8faa17d7992c4458da80c3d1aef3db300) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.13.2 to 1.13.3
+
+- [#301](https://github.com/Jensen95/inquirer-plugins/pull/301) [`30a4560`](https://github.com/Jensen95/inquirer-plugins/commit/30a456002db92f5773462178f3be80af58699ae1) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump prettier from 3.2.5 to 3.3.2
+
+- [#275](https://github.com/Jensen95/inquirer-plugins/pull/275) [`76702c8`](https://github.com/Jensen95/inquirer-plugins/commit/76702c8129cc6935db88a8ceec2742e3826db5f1) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump turbo from 1.13.2 to 1.13.3
+
+- [#274](https://github.com/Jensen95/inquirer-plugins/pull/274) [`0f74d92`](https://github.com/Jensen95/inquirer-plugins/commit/0f74d92f836b7ac9642f557de294e97a070fa42b) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 1.13.2 to 1.13.3
+
+- [#308](https://github.com/Jensen95/inquirer-plugins/pull/308) [`da82a12`](https://github.com/Jensen95/inquirer-plugins/commit/da82a125158d39d21d8464b24c55408f931a7d65) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.4.5 to 5.5.2
+
 ## 0.0.7
 
 ### Patch Changes

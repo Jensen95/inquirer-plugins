@@ -1,5 +1,25 @@
 # eslint-config-custom
 
+## 0.0.14
+
+### Patch Changes
+
+- [#271](https://github.com/Jensen95/inquirer-plugins/pull/271) [`893723e`](https://github.com/Jensen95/inquirer-plugins/commit/893723ed98706a8547a671a8e902061b82ed482a) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.0.0 to 9.1.1
+
+- [#272](https://github.com/Jensen95/inquirer-plugins/pull/272) [`fa9b59a`](https://github.com/Jensen95/inquirer-plugins/commit/fa9b59a9a36de76d3cb2b5e3898e1166371e880a) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.2.1 to 14.2.3
+
+- [#300](https://github.com/Jensen95/inquirer-plugins/pull/300) [`3e3d5c6`](https://github.com/Jensen95/inquirer-plugins/commit/3e3d5c6e037298f558400c5eae1d8eaf8b0b277c) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.2.3 to 14.2.4
+
+- [#273](https://github.com/Jensen95/inquirer-plugins/pull/273) [`bfb564a`](https://github.com/Jensen95/inquirer-plugins/commit/bfb564a8faa17d7992c4458da80c3d1aef3db300) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.13.2 to 1.13.3
+
+- [#312](https://github.com/Jensen95/inquirer-plugins/pull/312) [`ad337ad`](https://github.com/Jensen95/inquirer-plugins/commit/ad337ad94ae1dcade02c6da126a1dffd11c64e5e) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.13.3 to 2.0.5
+
+- [#306](https://github.com/Jensen95/inquirer-plugins/pull/306) [`a5dd5ae`](https://github.com/Jensen95/inquirer-plugins/commit/a5dd5aeaf204053d94cef5dcfc99888cd670f6c2) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-react from 7.34.1 to 7.34.3
+
+- [#275](https://github.com/Jensen95/inquirer-plugins/pull/275) [`76702c8`](https://github.com/Jensen95/inquirer-plugins/commit/76702c8129cc6935db88a8ceec2742e3826db5f1) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump turbo from 1.13.2 to 1.13.3
+
+- [#274](https://github.com/Jensen95/inquirer-plugins/pull/274) [`0f74d92`](https://github.com/Jensen95/inquirer-plugins/commit/0f74d92f836b7ac9642f557de294e97a070fa42b) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 1.13.2 to 1.13.3
+
 ## 0.0.13
 
 ### Patch Changes
