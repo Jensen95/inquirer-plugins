@@ -102,7 +102,9 @@ export const advancedSelectPrompt = createPrompt(
       }
       return null;
     });
-    const [cursorPosition, setCursorPosition] = useState(0);
+    const [cursorPosition, setCursorPosition] = useState(
+      initialChoices.findIndex(isSelectableChoice),
+    );
     const [showHelpTip, setShowHelpTip] = useState(true);
 
     useKeypress((key) => {
@@ -150,7 +152,7 @@ export const advancedSelectPrompt = createPrompt(
           case "r":
             setSearch("");
             setChoices(initialChoices);
-            setCursorPosition(0);
+            setCursorPosition(initialChoices.findIndex(isSelectableChoice));
             return;
           default:
             return;

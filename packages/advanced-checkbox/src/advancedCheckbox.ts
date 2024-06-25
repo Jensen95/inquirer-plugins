@@ -107,7 +107,9 @@ export const advancedCheckboxPrompt = createPrompt(
       }
       return preselectedIds;
     });
-    const [cursorPosition, setCursorPosition] = useState(0);
+    const [cursorPosition, setCursorPosition] = useState(
+      initialChoices.findIndex(isSelectableChoice),
+    );
     const [showHelpTip, setShowHelpTip] = useState(true);
 
     useKeypress((key) => {
@@ -184,16 +186,16 @@ export const advancedCheckboxPrompt = createPrompt(
           case "r":
             setSearch("");
             setChoices(initialChoices);
-            setCursorPosition(0);
+            setCursorPosition(initialChoices.findIndex(isSelectableChoice));
             return;
           case "tab":
-            const inversedSelectedChoices = new Set<string>();
+            const invertedSelectedChoices = new Set<string>();
             for (const item of initialChoices) {
               if (isSelectableChoice(item) && !selectedChoices.has(item.id)) {
-                inversedSelectedChoices.add(item.id);
+                invertedSelectedChoices.add(item.id);
               }
             }
-            setSelectedChoices(inversedSelectedChoices);
+            setSelectedChoices(invertedSelectedChoices);
             return;
           default:
             return;
