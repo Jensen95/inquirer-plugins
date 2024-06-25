@@ -1,5 +1,45 @@
 # advanced-select
 
+## 0.3.7
+
+### Patch Changes
+
+- [#279](https://github.com/Jensen95/inquirer-plugins/pull/279) [`0aaa1e3`](https://github.com/Jensen95/inquirer-plugins/commit/0aaa1e396ee9229b691725e3dfddd8f64cb8a8f4) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump ansi-escapes from 6.2.1 to 7.0.0
+
+- [#311](https://github.com/Jensen95/inquirer-plugins/pull/311) [`b046cea`](https://github.com/Jensen95/inquirer-plugins/commit/b046cea669c6cfb40353dd2d4a9fdabbad9514a8) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @changesets/cli from 2.27.1 to 2.27.6
+
+- [#271](https://github.com/Jensen95/inquirer-plugins/pull/271) [`893723e`](https://github.com/Jensen95/inquirer-plugins/commit/893723ed98706a8547a671a8e902061b82ed482a) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.0.0 to 9.1.1
+
+- [#280](https://github.com/Jensen95/inquirer-plugins/pull/280) [`4e3d62f`](https://github.com/Jensen95/inquirer-plugins/commit/4e3d62f2e491854424f4b2a80d27038c8f8f2c07) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.1.1 to 9.2.0
+
+- [#304](https://github.com/Jensen95/inquirer-plugins/pull/304) [`5a75c90`](https://github.com/Jensen95/inquirer-plugins/commit/5a75c909f13d83f5baf4e0559ca0c2c49c564d33) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.2.0 to 9.5.0
+
+- [#272](https://github.com/Jensen95/inquirer-plugins/pull/272) [`fa9b59a`](https://github.com/Jensen95/inquirer-plugins/commit/fa9b59a9a36de76d3cb2b5e3898e1166371e880a) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.2.1 to 14.2.3
+
+- [#273](https://github.com/Jensen95/inquirer-plugins/pull/273) [`bfb564a`](https://github.com/Jensen95/inquirer-plugins/commit/bfb564a8faa17d7992c4458da80c3d1aef3db300) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.13.2 to 1.13.3
+
+- [#312](https://github.com/Jensen95/inquirer-plugins/pull/312) [`ad337ad`](https://github.com/Jensen95/inquirer-plugins/commit/ad337ad94ae1dcade02c6da126a1dffd11c64e5e) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 1.13.3 to 2.0.5
+
+- [#281](https://github.com/Jensen95/inquirer-plugins/pull/281) [`79873c6`](https://github.com/Jensen95/inquirer-plugins/commit/79873c60341443e8a52c07fde0edc51ad8f48ffc) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 8.0.1 to 8.2.0
+
+- [#307](https://github.com/Jensen95/inquirer-plugins/pull/307) [`4ad26f7`](https://github.com/Jensen95/inquirer-plugins/commit/4ad26f7872f7bc5839f3e48cc9c8066aa02a57b6) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 8.2.0 to 8.2.3
+
+- [#301](https://github.com/Jensen95/inquirer-plugins/pull/301) [`30a4560`](https://github.com/Jensen95/inquirer-plugins/commit/30a456002db92f5773462178f3be80af58699ae1) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump prettier from 3.2.5 to 3.3.2
+
+- [#275](https://github.com/Jensen95/inquirer-plugins/pull/275) [`76702c8`](https://github.com/Jensen95/inquirer-plugins/commit/76702c8129cc6935db88a8ceec2742e3826db5f1) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump turbo from 1.13.2 to 1.13.3
+
+- [#309](https://github.com/Jensen95/inquirer-plugins/pull/309) [`81b0e4e`](https://github.com/Jensen95/inquirer-plugins/commit/81b0e4e62bd7b025b88264d3939ca95d7d3fd5c4) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump turbo from 1.13.3 to 2.0.5
+
+- [#274](https://github.com/Jensen95/inquirer-plugins/pull/274) [`0f74d92`](https://github.com/Jensen95/inquirer-plugins/commit/0f74d92f836b7ac9642f557de294e97a070fa42b) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 1.13.2 to 1.13.3
+
+- [#310](https://github.com/Jensen95/inquirer-plugins/pull/310) [`8a07b2b`](https://github.com/Jensen95/inquirer-plugins/commit/8a07b2b47e78ec2a74b425a3b5e95116ecbf4393) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 1.13.3 to 2.0.5
+
+- [#308](https://github.com/Jensen95/inquirer-plugins/pull/308) [`da82a12`](https://github.com/Jensen95/inquirer-plugins/commit/da82a125158d39d21d8464b24c55408f931a7d65) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.4.5 to 5.5.2
+
+- [`d466412`](https://github.com/Jensen95/inquirer-plugins/commit/d466412f3a1c3e39822dbd5988313d3f30f07fa2) Thanks [@Jensen95](https://github.com/Jensen95)! - Dependency audit
+
+- [`0bfff1f`](https://github.com/Jensen95/inquirer-plugins/commit/0bfff1fc02f73b809a63c1a607d51c4eedb6e751) Thanks [@Jensen95](https://github.com/Jensen95)! - Fixes initial choise could be a sperator
+
 ## 0.3.6
 
 ### Patch Changes
