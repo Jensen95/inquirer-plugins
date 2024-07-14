@@ -1,5 +1,17 @@
 # advanced-select
 
+## 0.3.9
+
+### Patch Changes
+
+- [#319](https://github.com/Jensen95/inquirer-plugins/pull/319) [`473be6a`](https://github.com/Jensen95/inquirer-plugins/commit/473be6a8c1ee5e7022e1093834491ae93dba6920) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.5.0 to 9.6.0
+
+- [#327](https://github.com/Jensen95/inquirer-plugins/pull/327) [`8814fa0`](https://github.com/Jensen95/inquirer-plugins/commit/8814fa0d0279ba7627476e43ff1ade57d71d596b) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.5.0 to 9.7.0
+
+- [#324](https://github.com/Jensen95/inquirer-plugins/pull/324) [`7064307`](https://github.com/Jensen95/inquirer-plugins/commit/7064307b0e2cbd936d0e19ea830e67bbeec78dc2) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 8.2.3 to 9.0.2
+
+- [#322](https://github.com/Jensen95/inquirer-plugins/pull/322) [`4a6fd97`](https://github.com/Jensen95/inquirer-plugins/commit/4a6fd97072762abec1ee2e1da1e55bb68bbb65fd) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.5.2 to 5.5.3
+
 ## 0.3.8
 
 ### Patch Changes
