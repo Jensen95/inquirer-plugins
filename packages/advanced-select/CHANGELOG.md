@@ -1,5 +1,21 @@
 # advanced-select
 
+## 0.3.10
+
+### Patch Changes
+
+- [#339](https://github.com/Jensen95/inquirer-plugins/pull/339) [`c2ca638`](https://github.com/Jensen95/inquirer-plugins/commit/c2ca638b602bcb2660b7d1b795d1bc94bdb417ea) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-react from 7.34.3 to 7.35.0
+
+- [#338](https://github.com/Jensen95/inquirer-plugins/pull/338) [`87aa6db`](https://github.com/Jensen95/inquirer-plugins/commit/87aa6db0125f37186757fd73a105fd364d877ac7) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 9.0.2 to 9.0.5
+
+- [#337](https://github.com/Jensen95/inquirer-plugins/pull/337) [`f833674`](https://github.com/Jensen95/inquirer-plugins/commit/f833674aecf1ce7abd6838e23cd3aa40b0904eae) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/type from 1.4.0 to 1.5.1
+
+- [#329](https://github.com/Jensen95/inquirer-plugins/pull/329) [`614de93`](https://github.com/Jensen95/inquirer-plugins/commit/614de9336a74fc3e6f0e34eabcea189ae170860b) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump prettier from 3.3.2 to 3.3.3
+
+- [#335](https://github.com/Jensen95/inquirer-plugins/pull/335) [`ffe4ba8`](https://github.com/Jensen95/inquirer-plugins/commit/ffe4ba866b1307dc80e3aa85470ee40e0ff826d6) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump turbo from 2.0.6 to 2.0.9
+
+- [#336](https://github.com/Jensen95/inquirer-plugins/pull/336) [`86de680`](https://github.com/Jensen95/inquirer-plugins/commit/86de680ee46deffbeaa186d641287ce9beccc442) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @turbo/gen from 2.0.6 to 2.0.9
+
 ## 0.3.9
 
 ### Patch Changes
