@@ -1,5 +1,11 @@
 # fuzzy-match
 
+## 0.0.12
+
+### Patch Changes
+
+- [#342](https://github.com/Jensen95/inquirer-plugins/pull/342) [`38dee2b`](https://github.com/Jensen95/inquirer-plugins/commit/38dee2be5cbc7ac0e8acf1813750e077358c950e) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.5.3 to 5.5.4
+
 ## 0.0.11
 
 ### Patch Changes
