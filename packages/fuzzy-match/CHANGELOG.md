@@ -1,5 +1,19 @@
 # fuzzy-match
 
+## 0.0.13
+
+### Patch Changes
+
+- [#368](https://github.com/Jensen95/inquirer-plugins/pull/368) [`2a480b3`](https://github.com/Jensen95/inquirer-plugins/commit/2a480b3ca2350f753ab2f3987eb430e402efab96) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.7.0 to 9.9.1
+
+- [#367](https://github.com/Jensen95/inquirer-plugins/pull/367) [`b07c7c2`](https://github.com/Jensen95/inquirer-plugins/commit/b07c7c2e42376d108ee36526b10fa9212f6144e7) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.2.5 to 14.2.6
+
+- [#366](https://github.com/Jensen95/inquirer-plugins/pull/366) [`c288ba9`](https://github.com/Jensen95/inquirer-plugins/commit/c288ba9076299b65e584feb24822359451fd7bee) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 2.0.9 to 2.0.14
+
+- [#356](https://github.com/Jensen95/inquirer-plugins/pull/356) [`f0f4d36`](https://github.com/Jensen95/inquirer-plugins/commit/f0f4d3636a11b16271c9d327b5f259a6416bd17e) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 9.0.5 to 9.0.10
+
+- [#364](https://github.com/Jensen95/inquirer-plugins/pull/364) [`0732029`](https://github.com/Jensen95/inquirer-plugins/commit/0732029a1150317881674fbdacd55b1d100257a4) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump turbo from 2.0.9 to 2.0.14
+
 ## 0.0.12
 
 ### Patch Changes
