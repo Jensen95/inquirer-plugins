@@ -1,5 +1,33 @@
 # advanced-select
 
+## 0.3.13
+
+### Patch Changes
+
+- [`3514c08`](https://github.com/Jensen95/inquirer-plugins/commit/3514c08f4403494f0b9e2960ad7f9a3b75987462) Thanks [@Jensen95](https://github.com/Jensen95)! - Fixes build error after usePagination hook broke
+
+- [#383](https://github.com/Jensen95/inquirer-plugins/pull/383) [`74c26fe`](https://github.com/Jensen95/inquirer-plugins/commit/74c26feb0eb572a66e228b2b64b375265a23dc38) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @changesets/cli from 2.27.7 to 2.27.8
+
+- [#398](https://github.com/Jensen95/inquirer-plugins/pull/398) [`e25dc35`](https://github.com/Jensen95/inquirer-plugins/commit/e25dc3542a135907cbef5b601a1e01f6511d3b84) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.9.1 to 9.11.1
+
+- [#408](https://github.com/Jensen95/inquirer-plugins/pull/408) [`d567cc3`](https://github.com/Jensen95/inquirer-plugins/commit/d567cc3738532444f7803baae4fe86963fbf2a5e) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint from 9.11.1 to 9.12.0
+
+- [#396](https://github.com/Jensen95/inquirer-plugins/pull/396) [`228e7a0`](https://github.com/Jensen95/inquirer-plugins/commit/228e7a0540aad5462b08608819d42c28d0f836aa) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-next from 14.2.6 to 14.2.13
+
+- [#390](https://github.com/Jensen95/inquirer-plugins/pull/390) [`9ad0bee`](https://github.com/Jensen95/inquirer-plugins/commit/9ad0bee453adbad6c1dfc700e1934f5c6f69a369) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 2.0.14 to 2.1.2
+
+- [#389](https://github.com/Jensen95/inquirer-plugins/pull/389) [`b5ad35f`](https://github.com/Jensen95/inquirer-plugins/commit/b5ad35f426cca5afbb83cf3780011bbd3bfa41b8) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-react from 7.35.0 to 7.36.1
+
+- [#407](https://github.com/Jensen95/inquirer-plugins/pull/407) [`0437ce6`](https://github.com/Jensen95/inquirer-plugins/commit/0437ce6df8354e48f968352beaa0ebf9433ad64d) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 9.2.1 to 10.0.0
+
+- [#394](https://github.com/Jensen95/inquirer-plugins/pull/394) [`7e90c0c`](https://github.com/Jensen95/inquirer-plugins/commit/7e90c0c6d9c521d11d4713a2fa7f9b0994e7b3c6) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 9.0.10 to 9.2.1
+
+- [#393](https://github.com/Jensen95/inquirer-plugins/pull/393) [`5d170e9`](https://github.com/Jensen95/inquirer-plugins/commit/5d170e967d7ab8d988f6cba01f606b7bf8b5f7ca) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/type from 1.5.2 to 1.5.5
+
+- [#409](https://github.com/Jensen95/inquirer-plugins/pull/409) [`f4e4611`](https://github.com/Jensen95/inquirer-plugins/commit/f4e4611d566bceb4ee85ec1c9bb2d91f182b4890) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/type from 1.5.5 to 3.0.0
+
+- [#386](https://github.com/Jensen95/inquirer-plugins/pull/386) [`df30b56`](https://github.com/Jensen95/inquirer-plugins/commit/df30b566b88c752992b574e9c4a0e93c7e3efcd5) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.5.4 to 5.6.2
+
 ## 0.3.12
 
 ### Patch Changes
