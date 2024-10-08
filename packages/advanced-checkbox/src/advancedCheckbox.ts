@@ -1,58 +1,56 @@
 import {
   createPrompt,
-  useState,
-  useRef,
+  isBackspaceKey,
+  isDownKey,
+  isEnterKey,
+  isSpaceKey,
+  isUpKey,
+  Separator,
   useKeypress,
   usePagination,
   usePrefix,
-  isUpKey,
-  isDownKey,
-  isSpaceKey,
-  isBackspaceKey,
-  isEnterKey,
-  Separator,
-  Theme,
+  useRef,
+  useState,
 } from '@inquirer/core'
+import ansiEscapes from 'ansi-escapes'
 import chalk from 'chalk'
 import figures from 'figures'
-import ansiEscapes from 'ansi-escapes'
 import { fuzzyMatch, removeScore } from 'fuzzy-match'
 import { isVimArrowBinding } from 'is-vim-arrow-binding'
 
-export type AdvancedCheckboxChoice<Value> = {
-  name?: string
-  value: Value
-  disabled?: boolean | string
+export interface AdvancedCheckboxChoice<Value> {
   checked?: boolean
+  disabled?: boolean | string
   id?: string
+  name?: string
   type?: never
+  value: Value
 }
 
-type Config<Value> = {
-  prefix?: string
-  pageSize: number
-  instructions?: string | boolean
+interface Config<Value> {
+  choices: readonly Item<Value>[]
+  instructions?: boolean | string
   message: string
-  choices: ReadonlyArray<Item<Value>>
+  pageSize: number
+  prefix?: string
 }
 
 type Item<Value> = AdvancedCheckboxChoice<Value> | Separator
 
 interface RenderItemParams<T> {
-  item: Item<T>
   isActive: boolean
+  item: Item<T>
 }
 const isSelectableChoice = <T>(
-  choice: undefined | Item<T>,
-): choice is AdvancedCheckboxChoice<T> => {
-  return choice != null && !Separator.isSeparator(choice) && !choice.disabled
-}
+  choice: Item<T> | undefined,
+): choice is AdvancedCheckboxChoice<T> =>
+  choice != null && !Separator.isSeparator(choice) && !choice.disabled
 
-const renderItem = <T>(renderItem?: RenderItemParams<T>) => {
-  if (renderItem == null) {
+const renderItem = <T>(ri?: RenderItemParams<T>) => {
+  if (ri == null) {
     return 'No results found'
   }
-  const { item, isActive } = renderItem
+  const { isActive, item } = ri
   if (Separator.isSeparator(item)) {
     return ` ${item.separator}`
   }
@@ -75,12 +73,12 @@ const renderItem = <T>(renderItem?: RenderItemParams<T>) => {
 export const advancedCheckboxPrompt = createPrompt(
   <Value extends unknown>(
     config: Config<Value>,
-    done: (value: Array<Value>) => void,
+    done: (value: Value[]) => void,
   ): string => {
     const {
-      prefix = usePrefix({ status: 'idle' }),
       instructions,
       pageSize,
+      prefix = usePrefix({ status: 'idle' }),
     } = config
     const initialChoices = useRef(
       config.choices.map(
@@ -91,11 +89,11 @@ export const advancedCheckboxPrompt = createPrompt(
               isSelectableChoice(choice) && choice.id != null
                 ? choice.id
                 : `INTERNAL_${choiceIndex}`,
-          }) as (Separator | AdvancedCheckboxChoice<Value>) & { id: string },
+          }) as { id: string } & (AdvancedCheckboxChoice<Value> | Separator),
       ),
     ).current
 
-    const [status, setStatus] = useState<'pending' | 'done'>('pending')
+    const [status, setStatus] = useState<'done' | 'pending'>('pending')
     const [search, setSearch] = useState('')
     const [choices, setChoices] = useState(initialChoices)
     const [selectedChoices, setSelectedChoices] = useState<Set<string>>(() => {
@@ -159,20 +157,20 @@ export const advancedCheckboxPrompt = createPrompt(
             ? selectedChoices.delete(choice.id)
             : selectedChoices.add(choice.id)
 
-          setSelectedChoices(new Set([...selectedChoices]))
+          setSelectedChoices(new Set(selectedChoices))
         }
         return
       }
 
       if (key.ctrl || key.name === 'tab') {
         switch (key.name) {
-          case 'a':
+          case 'a': {
             const choiceCount = initialChoices.filter(isSelectableChoice).length
             if (selectedChoices.size === choiceCount) {
               setSelectedChoices(new Set())
               return
             }
-            const updatedSelectedChoices = new Set([...selectedChoices])
+            const updatedSelectedChoices = new Set(selectedChoices)
             for (const item of initialChoices) {
               if (isSelectableChoice(item)) {
                 updatedSelectedChoices.add(item.id)
@@ -180,12 +178,13 @@ export const advancedCheckboxPrompt = createPrompt(
             }
             setSelectedChoices(updatedSelectedChoices)
             return
+          }
           case 'r':
             setSearch('')
             setChoices(initialChoices)
             setCursorPosition(initialChoices.findIndex(isSelectableChoice))
             return
-          case 'tab':
+          case 'tab': {
             const invertedSelectedChoices = new Set<string>()
             for (const item of initialChoices) {
               if (isSelectableChoice(item) && !selectedChoices.has(item.id)) {
@@ -194,6 +193,7 @@ export const advancedCheckboxPrompt = createPrompt(
             }
             setSelectedChoices(invertedSelectedChoices)
             return
+          }
           default:
             return
         }
@@ -251,13 +251,13 @@ export const advancedCheckboxPrompt = createPrompt(
     }
 
     const windowedChoices = usePagination({
+      active: cursorPosition,
       items: choices.map((choice) => ({
         ...choice,
         checked: selectedChoices.has(choice.id),
       })),
-      active: cursorPosition,
-      renderItem,
       pageSize,
+      renderItem,
     })
     return `${prefix} ${message}${
       search.length > 0 ? ' ' + chalk.yellow(search) : ''

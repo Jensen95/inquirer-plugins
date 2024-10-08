@@ -1,57 +1,56 @@
 import {
   createPrompt,
-  useState,
-  useRef,
-  useKeypress,
-  usePrefix,
-  usePagination,
-  isUpKey,
-  isDownKey,
-  isSpaceKey,
   isBackspaceKey,
+  isDownKey,
   isEnterKey,
+  isSpaceKey,
+  isUpKey,
   Separator,
+  useKeypress,
+  usePagination,
+  usePrefix,
+  useRef,
+  useState,
 } from '@inquirer/core'
+import ansiEscapes from 'ansi-escapes'
 import chalk from 'chalk'
 import figures from 'figures'
-import ansiEscapes from 'ansi-escapes'
 import { fuzzyMatch, removeScore } from 'fuzzy-match'
 import { isVimArrowBinding } from 'is-vim-arrow-binding'
 
-export type AdvancedSelectChoice<Value> = {
-  name?: string
-  value: Value
-  disabled?: boolean | string
+export interface AdvancedSelectChoice<Value> {
   checked?: boolean
+  disabled?: boolean | string
   id?: string
+  name?: string
   type?: never
+  value: Value
 }
 
-type Config<Value> = {
-  prefix?: string
-  pageSize: number
-  instructions?: string | boolean
+interface Config<Value> {
+  choices: readonly Item<Value>[]
+  instructions?: boolean | string
   message: string
-  choices: ReadonlyArray<Item<Value>>
+  pageSize: number
+  prefix?: string
 }
 
 type Item<Value> = AdvancedSelectChoice<Value> | Separator
 
 interface RenderItemParams<T> {
-  item: Item<T>
   isActive: boolean
+  item: Item<T>
 }
 const isSelectableChoice = <T>(
-  choice: undefined | Item<T>,
-): choice is AdvancedSelectChoice<T> => {
-  return choice != null && !Separator.isSeparator(choice) && !choice.disabled
-}
+  choice: Item<T> | undefined,
+): choice is AdvancedSelectChoice<T> =>
+  choice != null && !Separator.isSeparator(choice) && !choice.disabled
 
-const renderItem = <T>(renderItem?: RenderItemParams<T>) => {
-  if (renderItem == null) {
+const renderItem = <T>(ri?: RenderItemParams<T>) => {
+  if (ri == null) {
     return 'No results found'
   }
-  const { item, isActive } = renderItem
+  const { isActive, item } = ri
   if (Separator.isSeparator(item)) {
     return ` ${item.separator}`
   }
@@ -74,9 +73,9 @@ export const advancedSelectPrompt = createPrompt(
     done: (value: Value) => void,
   ): string => {
     const {
-      prefix = usePrefix({ status: 'idle' }),
       instructions,
       pageSize,
+      prefix = usePrefix({ status: 'idle' }),
     } = config
     const initialChoices = useRef(
       config.choices.map(
@@ -87,14 +86,14 @@ export const advancedSelectPrompt = createPrompt(
               isSelectableChoice(choice) && choice.id != null
                 ? choice.id
                 : `INTERNAL_${choiceIndex}`,
-          }) as (Separator | AdvancedSelectChoice<Value>) & { id: string },
+          }) as { id: string } & (AdvancedSelectChoice<Value> | Separator),
       ),
     ).current
 
-    const [status, setStatus] = useState<'pending' | 'done'>('pending')
+    const [status, setStatus] = useState<'done' | 'pending'>('pending')
     const [search, setSearch] = useState('')
     const [choices, setChoices] = useState(initialChoices)
-    const [selectedId, setSelectedId] = useState<string | null>(() => {
+    const [selectedId, setSelectedId] = useState<null | string>(() => {
       for (const item of initialChoices) {
         if (isSelectableChoice(item) && item.checked) {
           return item.id
@@ -146,6 +145,7 @@ export const advancedSelectPrompt = createPrompt(
       }
 
       if (key.ctrl || key.name === 'tab') {
+        // eslint-disable-next-line sonarjs/no-small-switch
         switch (key.name) {
           case 'r':
             setSearch('')
@@ -203,10 +203,10 @@ export const advancedSelectPrompt = createPrompt(
     }
 
     const windowedChoices = usePagination({
-      items: choices,
-      renderItem,
       active: cursorPosition,
+      items: choices,
       pageSize,
+      renderItem,
     })
     return `${prefix} ${message}${
       search.length > 0 ? ' ' + chalk.yellow(search) : ''

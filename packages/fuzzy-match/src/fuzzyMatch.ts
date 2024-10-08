@@ -5,7 +5,7 @@ export interface FuzzyMatchResult<T> {
 
 export const removeScore = <T>(result: FuzzyMatchResult<T>): T => result.item
 
-export const fuzzyMatch = <T extends { name?: string; id: string }>(
+export const fuzzyMatch = <T extends { id: string; name?: string }>(
   query: string,
   list: T[],
 ): FuzzyMatchResult<T>[] => {
@@ -17,8 +17,8 @@ export const fuzzyMatch = <T extends { name?: string; id: string }>(
     const itemArr = _search.toLowerCase().split('')
     const queryArr = query.toLowerCase().split('')
 
-    for (let i = 0; i < itemArr.length; i++) {
-      if (itemArr[i] === queryArr[score]) {
+    for (const element of itemArr) {
+      if (element === queryArr[score]) {
         score++
       }
     }

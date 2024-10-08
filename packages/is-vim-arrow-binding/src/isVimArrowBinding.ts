@@ -1,6 +1,6 @@
 interface KeypressEvent {
-  name: string
   ctrl: boolean
+  name: string
 }
 
 export const isVimArrowBinding = (key: KeypressEvent): boolean => {
