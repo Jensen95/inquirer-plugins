@@ -1,5 +1,11 @@
 # eslint-config-custom
 
+## 0.0.20
+
+### Patch Changes
+
+- [`57555ac`](https://github.com/Jensen95/inquirer-plugins/commit/57555ac5d198ea4dd5cc56fc34ee3b8a360cb123) Thanks [@Jensen95](https://github.com/Jensen95)! - Formatting and ESLint setup change
+
 ## 0.0.19
 
 ### Patch Changes
