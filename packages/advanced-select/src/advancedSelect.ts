@@ -11,62 +11,62 @@ import {
   isBackspaceKey,
   isEnterKey,
   Separator,
-} from "@inquirer/core";
-import chalk from "chalk";
-import figures from "figures";
-import ansiEscapes from "ansi-escapes";
-import { fuzzyMatch, removeScore } from "fuzzy-match";
-import { isVimArrowBinding } from "is-vim-arrow-binding";
+} from '@inquirer/core'
+import chalk from 'chalk'
+import figures from 'figures'
+import ansiEscapes from 'ansi-escapes'
+import { fuzzyMatch, removeScore } from 'fuzzy-match'
+import { isVimArrowBinding } from 'is-vim-arrow-binding'
 
 export type AdvancedSelectChoice<Value> = {
-  name?: string;
-  value: Value;
-  disabled?: boolean | string;
-  checked?: boolean;
-  id?: string;
-  type?: never;
-};
+  name?: string
+  value: Value
+  disabled?: boolean | string
+  checked?: boolean
+  id?: string
+  type?: never
+}
 
 type Config<Value> = {
-  prefix?: string;
-  pageSize: number;
-  instructions?: string | boolean;
-  message: string;
-  choices: ReadonlyArray<Item<Value>>;
-};
+  prefix?: string
+  pageSize: number
+  instructions?: string | boolean
+  message: string
+  choices: ReadonlyArray<Item<Value>>
+}
 
-type Item<Value> = AdvancedSelectChoice<Value> | Separator;
+type Item<Value> = AdvancedSelectChoice<Value> | Separator
 
 interface RenderItemParams<T> {
-  item: Item<T>;
-  isActive: boolean;
+  item: Item<T>
+  isActive: boolean
 }
 const isSelectableChoice = <T>(
   choice: undefined | Item<T>,
 ): choice is AdvancedSelectChoice<T> => {
-  return choice != null && !Separator.isSeparator(choice) && !choice.disabled;
-};
+  return choice != null && !Separator.isSeparator(choice) && !choice.disabled
+}
 
 const renderItem = <T>(renderItem?: RenderItemParams<T>) => {
   if (renderItem == null) {
-    return "No results found";
+    return 'No results found'
   }
-  const { item, isActive } = renderItem;
+  const { item, isActive } = renderItem
   if (Separator.isSeparator(item)) {
-    return ` ${item.separator}`;
+    return ` ${item.separator}`
   }
 
-  const line = item.name || item.value;
+  const line = item.name || item.value
   if (item.disabled) {
     const disabledLabel =
-      typeof item.disabled === "string" ? item.disabled : "(disabled)";
-    return chalk.dim(`- ${line} ${disabledLabel}`);
+      typeof item.disabled === 'string' ? item.disabled : '(disabled)'
+    return chalk.dim(`- ${line} ${disabledLabel}`)
   }
 
-  const color = isActive ? chalk.cyan : (x: string) => x;
-  const prefix = isActive ? figures.pointer : " ";
-  return color(`${prefix} ${line}`);
-};
+  const color = isActive ? chalk.cyan : (x: string) => x
+  const prefix = isActive ? figures.pointer : ' '
+  return color(`${prefix} ${line}`)
+}
 
 export const advancedSelectPrompt = createPrompt(
   <Value extends unknown>(
@@ -74,10 +74,10 @@ export const advancedSelectPrompt = createPrompt(
     done: (value: Value) => void,
   ): string => {
     const {
-      prefix = usePrefix({ isLoading: false }),
+      prefix = usePrefix({ status: 'idle' }),
       instructions,
       pageSize,
-    } = config;
+    } = config
     const initialChoices = useRef(
       config.choices.map(
         (choice, choiceIndex) =>
@@ -89,119 +89,117 @@ export const advancedSelectPrompt = createPrompt(
                 : `INTERNAL_${choiceIndex}`,
           }) as (Separator | AdvancedSelectChoice<Value>) & { id: string },
       ),
-    ).current;
+    ).current
 
-    const [status, setStatus] = useState<"pending" | "done">("pending");
-    const [search, setSearch] = useState("");
-    const [choices, setChoices] = useState(initialChoices);
+    const [status, setStatus] = useState<'pending' | 'done'>('pending')
+    const [search, setSearch] = useState('')
+    const [choices, setChoices] = useState(initialChoices)
     const [selectedId, setSelectedId] = useState<string | null>(() => {
       for (const item of initialChoices) {
         if (isSelectableChoice(item) && item.checked) {
-          return item.id;
+          return item.id
         }
       }
-      return null;
-    });
+      return null
+    })
     const [cursorPosition, setCursorPosition] = useState(
       initialChoices.findIndex(isSelectableChoice),
-    );
-    const [showHelpTip, setShowHelpTip] = useState(true);
+    )
+    const [showHelpTip, setShowHelpTip] = useState(true)
 
     useKeypress((key) => {
-      let newCursorPosition = cursorPosition;
+      let newCursorPosition = cursorPosition
       if (isEnterKey(key) || isSpaceKey(key)) {
         if (selectedId == null) {
-          const cursorChoice = choices[cursorPosition];
-          const choice = isSelectableChoice(cursorChoice)
-            ? cursorChoice
-            : false;
+          const cursorChoice = choices[cursorPosition]
+          const choice = isSelectableChoice(cursorChoice) ? cursorChoice : false
 
           if (choice) {
-            setStatus("done");
-            setSelectedId(choice.id);
-            done(choice.value);
+            setStatus('done')
+            setSelectedId(choice.id)
+            done(choice.value)
           }
-          return;
+          return
         }
 
-        setStatus("done");
+        setStatus('done')
         done(
           initialChoices
             .filter((item) => selectedId === item.id)
             .map((choice) => (choice as AdvancedSelectChoice<Value>).value)[0],
-        );
-        return;
+        )
+        return
       }
 
       if (!isVimArrowBinding(key) && (isUpKey(key) || isDownKey(key))) {
-        const offset = isUpKey(key) ? -1 : 1;
-        let selectedOption;
+        const offset = isUpKey(key) ? -1 : 1
+        let selectedOption
 
         while (!isSelectableChoice(selectedOption)) {
           newCursorPosition =
-            (newCursorPosition + offset + choices.length) % choices.length;
-          selectedOption = choices[newCursorPosition];
+            (newCursorPosition + offset + choices.length) % choices.length
+          selectedOption = choices[newCursorPosition]
         }
 
-        setCursorPosition(newCursorPosition);
-        return;
+        setCursorPosition(newCursorPosition)
+        return
       }
 
-      if (key.ctrl || key.name === "tab") {
+      if (key.ctrl || key.name === 'tab') {
         switch (key.name) {
-          case "r":
-            setSearch("");
-            setChoices(initialChoices);
-            setCursorPosition(initialChoices.findIndex(isSelectableChoice));
-            return;
+          case 'r':
+            setSearch('')
+            setChoices(initialChoices)
+            setCursorPosition(initialChoices.findIndex(isSelectableChoice))
+            return
           default:
-            return;
+            return
         }
       }
 
       const _search = isBackspaceKey(key)
-        ? [...search].slice(0, search.length - 1).join("")
-        : `${search}${key.name}`;
-      setSearch(_search);
-      setShowHelpTip(true);
+        ? [...search].slice(0, search.length - 1).join('')
+        : `${search}${key.name}`
+      setSearch(_search)
+      setShowHelpTip(true)
 
       setChoices(
         fuzzyMatch(_search, initialChoices.filter(isSelectableChoice)).map(
           removeScore,
         ),
-      );
-      setCursorPosition(0);
-    });
+      )
+      setCursorPosition(0)
+    })
 
-    const message = chalk.bold(config.message);
+    const message = chalk.bold(config.message)
 
-    if (status === "done") {
+    if (status === 'done') {
       const selection = initialChoices
         .filter((item) => selectedId === item.id)
         .map(
           (choice) =>
             (choice as AdvancedSelectChoice<Value>).name ||
             (choice as AdvancedSelectChoice<Value>).value,
-        );
-      return `${prefix} ${message} ${chalk.cyan(selection.join(", "))}`;
+        )
+      return `${prefix} ${message} ${chalk.cyan(selection.join(', '))}`
     }
 
-    let helpTip = "";
+    let helpTip = ''
     if (showHelpTip && (instructions === undefined || instructions)) {
-      if (typeof instructions === "string") {
-        helpTip = instructions;
+      if (typeof instructions === 'string') {
+        helpTip = instructions
       } else {
         const keys = [
-          `${chalk.cyan.bold("<space>")} or ${chalk.cyan.bold(
-            "<enter>",
+          `${chalk.cyan.bold('<space>')} or ${chalk.cyan.bold(
+            '<enter>',
           )} to select and proceed`,
-        ];
-        helpTip = ` (Press ${keys.join(", ")})`;
+        ]
+        helpTip = ` (Press ${keys.join(', ')})`
       }
     }
 
     if (search.length > 0) {
-      helpTip = `\n${chalk.cyan.bold("<ctrl> + <r>")} to clear search`;
+      helpTip = `\n${chalk.cyan.bold('<ctrl> + <r>')} to clear search`
     }
 
     const windowedChoices = usePagination({
@@ -209,11 +207,11 @@ export const advancedSelectPrompt = createPrompt(
       renderItem,
       active: cursorPosition,
       pageSize,
-    });
+    })
     return `${prefix} ${message}${
-      search.length > 0 ? " " + chalk.yellow(search) : ""
-    }${helpTip}\n${windowedChoices}${ansiEscapes.cursorHide}`;
+      search.length > 0 ? ' ' + chalk.yellow(search) : ''
+    }${helpTip}\n${windowedChoices}${ansiEscapes.cursorHide}`
   },
-);
+)
 
-export { Separator };
+export { Separator }
