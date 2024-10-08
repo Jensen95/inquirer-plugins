@@ -1,11 +1,17 @@
 {
   "name": "@jensen95/advanced-checkbox",
   "version": "0.3.12",
-  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/Jensen95/inquirer-plugins",
+    "directory": "packages/advanced-checkbox"
+  },
+  "license": "MIT",
   "author": {
     "name": "Morten Jensen",
     "email": "mj.95dk@gmail.com"
   },
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -17,19 +23,9 @@
   "files": [
     "dist"
   ],
-  "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.ts*\"",
-    "build": "unbuild"
-  },
-  "devDependencies": {
-    "eslint": "^9.12.0",
-    "eslint-config-custom": "*",
-    "is-vim-arrow-binding": "*",
-    "fuzzy-match": "*",
-    "tsconfig": "*",
-    "typescript": "^5.6.2",
-    "unbuild": "^2.0.0"
+    "build": "unbuild",
+    "lint": "eslint \"**/*.ts*\""
   },
   "dependencies": {
     "@inquirer/core": "^10.0.0",
@@ -38,12 +34,16 @@
     "chalk": "^5.3.0",
     "figures": "^6.1.0"
   },
+  "devDependencies": {
+    "eslint": "^9.12.0",
+    "eslint-config-custom": "*",
+    "fuzzy-match": "*",
+    "is-vim-arrow-binding": "*",
+    "tsconfig": "*",
+    "typescript": "^5.6.2",
+    "unbuild": "^2.0.0"
+  },
   "publishConfig": {
     "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com/Jensen95/inquirer-plugins",
-    "directory": "packages/advanced-checkbox"
   }
 }

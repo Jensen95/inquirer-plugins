@@ -1,1 +1,1 @@
-export * from "./advancedCheckbox.js";
+export * from './advancedCheckbox.js'

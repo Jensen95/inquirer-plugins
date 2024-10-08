@@ -1,1 +1,1 @@
-export * from "./isVimArrowBinding";
+export * from './isVimArrowBinding'
