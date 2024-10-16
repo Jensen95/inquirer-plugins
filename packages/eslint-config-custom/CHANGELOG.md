@@ -1,5 +1,23 @@
 # eslint-config-custom
 
+## 0.0.21
+
+### Patch Changes
+
+- [#415](https://github.com/Jensen95/inquirer-plugins/pull/415) [`55de9ed`](https://github.com/Jensen95/inquirer-plugins/commit/55de9edd6ba471116f03f7428a7df31665e83690) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-n from 17.10.3 to 17.11.1
+
+- [#420](https://github.com/Jensen95/inquirer-plugins/pull/420) [`0f24d31`](https://github.com/Jensen95/inquirer-plugins/commit/0f24d31b67d862587db32ea33cd074f1d9232356) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-perfectionist from 3.8.0 to 3.9.0
+
+- [#411](https://github.com/Jensen95/inquirer-plugins/pull/411) [`4cfd893`](https://github.com/Jensen95/inquirer-plugins/commit/4cfd893d73aaa35d9de56b1322fbeb7ce04780d0) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-unicorn from 55.0.0 to 56.0.0
+
+- [#414](https://github.com/Jensen95/inquirer-plugins/pull/414) [`9473fe3`](https://github.com/Jensen95/inquirer-plugins/commit/9473fe30824bfdb161571e75b71ce98d19aa9ed5) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump prettier-plugin-packagejson from 2.5.2 to 2.5.3
+
+- [#413](https://github.com/Jensen95/inquirer-plugins/pull/413) [`04fd1f0`](https://github.com/Jensen95/inquirer-plugins/commit/04fd1f0f60b39b8d70d12fc98e73d3b14cb529af) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.6.2 to 5.6.3
+
+- [#416](https://github.com/Jensen95/inquirer-plugins/pull/416) [`684f7bc`](https://github.com/Jensen95/inquirer-plugins/commit/684f7bcc72d980425b4b2fff6a2ca786ae317a8f) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript-eslint from 8.8.1 to 8.9.0
+
+- [#418](https://github.com/Jensen95/inquirer-plugins/pull/418) [`43a5d20`](https://github.com/Jensen95/inquirer-plugins/commit/43a5d20b066fcb5b52eb544d06f532fe936ed49c) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @typescript-eslint/parser from 8.8.1 to 8.9.0
+
 ## 0.0.20
 
 ### Patch Changes
