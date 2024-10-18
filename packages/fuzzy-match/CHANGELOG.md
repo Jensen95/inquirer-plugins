@@ -1,5 +1,13 @@
 # fuzzy-match
 
+## 0.0.17
+
+### Patch Changes
+
+- [#423](https://github.com/Jensen95/inquirer-plugins/pull/423) [`5d6e0f5`](https://github.com/Jensen95/inquirer-plugins/commit/5d6e0f5280f3a51ec59f91f653030a7b1f0bd1ff) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-perfectionist from 3.9.0 to 3.9.1
+
+- [#424](https://github.com/Jensen95/inquirer-plugins/pull/424) [`8e76344`](https://github.com/Jensen95/inquirer-plugins/commit/8e7634404d3424d26a58655decec04214cc93eee) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @typescript-eslint/parser from 8.9.0 to 8.10.0
+
 ## 0.0.16
 
 ### Patch Changes

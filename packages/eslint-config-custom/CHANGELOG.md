@@ -1,5 +1,17 @@
 # eslint-config-custom
 
+## 0.0.22
+
+### Patch Changes
+
+- [#423](https://github.com/Jensen95/inquirer-plugins/pull/423) [`5d6e0f5`](https://github.com/Jensen95/inquirer-plugins/commit/5d6e0f5280f3a51ec59f91f653030a7b1f0bd1ff) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-perfectionist from 3.9.0 to 3.9.1
+
+- [#421](https://github.com/Jensen95/inquirer-plugins/pull/421) [`91e42cc`](https://github.com/Jensen95/inquirer-plugins/commit/91e42cc2c067cfac7379293e92bbd86a7cef1431) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript-eslint from 8.9.0 to 8.10.0
+
+- [#422](https://github.com/Jensen95/inquirer-plugins/pull/422) [`dea8ede`](https://github.com/Jensen95/inquirer-plugins/commit/dea8ede2fcbdbf111c5ce2b2c6df034621fff9c3) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @typescript-eslint/eslint-plugin from 8.9.0 to 8.10.0
+
+- [#424](https://github.com/Jensen95/inquirer-plugins/pull/424) [`8e76344`](https://github.com/Jensen95/inquirer-plugins/commit/8e7634404d3424d26a58655decec04214cc93eee) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @typescript-eslint/parser from 8.9.0 to 8.10.0
+
 ## 0.0.21
 
 ### Patch Changes
