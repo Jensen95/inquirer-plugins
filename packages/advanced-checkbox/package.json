@@ -41,7 +41,7 @@
     "is-vim-arrow-binding": "*",
     "tsconfig": "*",
     "typescript": "^5.6.3",
-    "unbuild": "^2.0.0"
+    "unbuild": "^3.3.0"
   },
   "publishConfig": {
     "access": "public"
