@@ -1,5 +1,37 @@
 # is-vim-arrow-binding
 
+## 0.0.17
+
+### Patch Changes
+
+- [#518](https://github.com/Jensen95/inquirer-plugins/pull/518) [`d20f06a`](https://github.com/Jensen95/inquirer-plugins/commit/d20f06aaebad64560bd93b782c4429416aa7e5bd) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @changesets/cli from 2.27.9 to 2.27.11
+
+- [#546](https://github.com/Jensen95/inquirer-plugins/pull/546) [`aa7afdc`](https://github.com/Jensen95/inquirer-plugins/commit/aa7afdcdb063e61411d36c69c7eabbaf8b51b643) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-prettier from 9.1.0 to 10.0.1
+
+- [#491](https://github.com/Jensen95/inquirer-plugins/pull/491) [`25cd84d`](https://github.com/Jensen95/inquirer-plugins/commit/25cd84db752642a6d39b2e79c7ee9040bc3b5123) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-config-turbo from 2.1.3 to 2.3.3
+
+- [#502](https://github.com/Jensen95/inquirer-plugins/pull/502) [`c3776d6`](https://github.com/Jensen95/inquirer-plugins/commit/c3776d68e17ccda0f0da3f949a0673d6963d1a49) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-import-resolver-typescript from 3.6.3 to 3.7.0
+
+- [#525](https://github.com/Jensen95/inquirer-plugins/pull/525) [`dc98d65`](https://github.com/Jensen95/inquirer-plugins/commit/dc98d6539935b74c0113a6d055bdc587c0619bfa) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-n from 17.11.1 to 17.15.1
+
+- [#534](https://github.com/Jensen95/inquirer-plugins/pull/534) [`1454620`](https://github.com/Jensen95/inquirer-plugins/commit/14546209295d5b485010b3e641f723c5a73f0280) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-perfectionist from 3.9.1 to 4.6.0
+
+- [#550](https://github.com/Jensen95/inquirer-plugins/pull/550) [`1464b23`](https://github.com/Jensen95/inquirer-plugins/commit/1464b23711b45ebe34aed9a37c92dfc484ac5538) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-prettier from 5.2.1 to 5.2.2
+
+- [#490](https://github.com/Jensen95/inquirer-plugins/pull/490) [`0b1a396`](https://github.com/Jensen95/inquirer-plugins/commit/0b1a39679d35696767fa0a78837e6a382dcaf8f5) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-promise from 7.1.0 to 7.2.1
+
+- [#505](https://github.com/Jensen95/inquirer-plugins/pull/505) [`a392a21`](https://github.com/Jensen95/inquirer-plugins/commit/a392a21fab262651e790f1778fdb3aee8ce65175) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-sonarjs from 2.0.3 to 3.0.1
+
+- [#472](https://github.com/Jensen95/inquirer-plugins/pull/472) [`53815bd`](https://github.com/Jensen95/inquirer-plugins/commit/53815bdb73981470d888c667256674b1930c7dd1) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump eslint-plugin-unicorn from 56.0.0 to 56.0.1
+
+- [#547](https://github.com/Jensen95/inquirer-plugins/pull/547) [`c0d1623`](https://github.com/Jensen95/inquirer-plugins/commit/c0d16232f7c74d7cf5aba38313e453110fbb7b8c) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump @inquirer/core from 10.0.0 to 10.1.4
+
+- [#551](https://github.com/Jensen95/inquirer-plugins/pull/551) [`3f905d9`](https://github.com/Jensen95/inquirer-plugins/commit/3f905d91c368699c00279007c004aff74110ef27) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump prettier-plugin-packagejson from 2.5.3 to 2.5.8
+
+- [#538](https://github.com/Jensen95/inquirer-plugins/pull/538) [`7eecf20`](https://github.com/Jensen95/inquirer-plugins/commit/7eecf2006453673de6603c07e3f238e742426c4f) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript from 5.6.3 to 5.7.3
+
+- [#548](https://github.com/Jensen95/inquirer-plugins/pull/548) [`2153e14`](https://github.com/Jensen95/inquirer-plugins/commit/2153e14d9abeaf4accc33fedd6ad7571d3437dd7) Thanks [@dependabot](https://github.com/apps/dependabot)! - Bump typescript-eslint from 8.10.0 to 8.20.0
+
 ## 0.0.16
 
 ### Patch Changes
